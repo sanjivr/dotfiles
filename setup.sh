@@ -8,5 +8,6 @@ ln -sf `pwd`/tmux.conf ~/.tmux.conf
 
 # ln -sf `pwd`/xsession ~/.xsession
 
+ln -sf `pwd`/dhexception.vim ~/.vim/
 mkdir -p ~/.vim/syntax/
 ln -sf `pwd`/pig.vim ~/.vim/syntax/

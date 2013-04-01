@@ -8,5 +8,6 @@ rm ~/.tmux.conf
 
 # rm ~/.xsession
 
+rm ~/.vim/dhexception.vim
 rm ~/.vim/syntax/pig.vim
 rm -rf ~/.vim/syntax

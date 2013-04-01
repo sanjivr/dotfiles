@@ -19,6 +19,8 @@ set ff=unix
 "se nobomb
 "source ~/cscope_maps.vim
 
+source ~/.vim/dhexception.vim
+
 
 augroup filetypedetect 
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
