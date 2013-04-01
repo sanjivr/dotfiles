@@ -1,0 +1,45 @@
+# .screenrc file that was composed from several sources
+#
+#
+
+## don't nag me
+#startup_message off
+
+# scrollback buffer
+defscrollback 30000
+
+# don't blink at me
+vbell off
+#vbell_msg ""
+
+# show the "tabs" at the bottom of the terminal
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.wk}%w"
+caption always "%{kB}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kB}%?%+Lw%?"
+hardstatus alwayslastline "%{BW}%16=%l %{BW}%50=%m.%d.%Y %{BW}%80=%c%="
+# tab titles are the first word of the command
+shelltitle "$ |bash"
+
+
+# screen fix for bash
+#ps $PPID | grep -q -i SCREEN
+#if [ "$?" = "0" ]; then
+#       export PS1='\[\033k\033\\\]'${PS1}
+#fi
+
+# bind F1  to create a new screen
+# bind F2 to move to previous window
+# bind F3 to move to next window
+# bind F4  to detach screen session from this terminal
+# bind F5 to rename current screen window
+# bind F6  to kill current screen window.
+bindkey -k k1 screen
+bindkey -k k2 prev
+bindkey -k k3 next
+bindkey -k k4 detach
+bindkey -k k5 title
+bindkey -k k6 kill
+bindkey -k k7 windowlist -b
+
+termcapinfo xterm-color ti@:te@
