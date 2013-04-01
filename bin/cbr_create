@@ -1,0 +1,15 @@
+#!/bin/bash
+dirname=`pwd`
+book=${dirname##*/}
+book=$book".cbz"
+for  i in `ls *.JPG` 
+do
+	j=`echo $i | cut -d. -f1 | cut -dP -f2`
+	j=$(printf "%03d" $j)
+	j=$j".JPG"
+	mv $i $j
+done
+tar -cvf "$book" *.JPG
+mv "$book" ../
+cd ..
+rm -rf "$dirname"

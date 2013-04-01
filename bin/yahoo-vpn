@@ -1,0 +1,2 @@
+sudo openconnect --usergroup=GeneralHybrid --script=/etc/vpnc/vpnc-script --user=sanjivr --background vpn1-1-gci.eglbp.corp.yahoo.com
+

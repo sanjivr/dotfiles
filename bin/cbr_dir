@@ -1,0 +1,12 @@
+IFS="$(echo -e "\n\r")"
+for i in `ls -d */`
+do
+	if [ -d $i ]
+	then
+			echo $i
+			cd "$i"
+			cbr_create
+			cd ../
+	fi
+done
+
