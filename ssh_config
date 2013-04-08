@@ -1,9 +1,28 @@
-Host home
-Hostname proxy.eglbp.corp.yahoo.com
-LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
-Host singledollar-dx singledollar-dx.eglbp
-Hostname singledollar-dx.eglbp.corp.yahoo.com
+Protocol 2,1 
+
+Host *
+#PermitLocalCommand yes
+#LocalCommand printf '\033]2;%s\033\\' '%h'
+
+Host bvt.edit.yahoo.com 
+ProxyCommand ssh login1.corp.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
 Host nitro
 Hostname nitro-gw.blue.ygrid.yahoo.com
+
+Host singledollar-dx singledollar-dx.eglbp
+Hostname singledollar-dx.eglbp.corp.yahoo.com
+
 Host pageaboved-dr pageaboved-dr.eglbp
 Hostname pageaboved-dr.eglbp.corp.yahoo.com
+
+Host svn.corp.yahoo.com
+Protocol 2
+
+Host github.com
+Protocol 2
+IdentityFile ~/.ssh/id_github_rsa
+
+Host office
+Hostname proxy.eglbp.corp.yahoo.com
+LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
