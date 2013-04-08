@@ -14,7 +14,7 @@ ln -sf `pwd`/tmux.conf 		~/.tmux.conf
 
 #ln -sf ~/Dropbox/System/Unix/ssh ~/.ssh
 ln -sf `pwd`/ssh_config		~/.ssh/config
-ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_key2
+ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
 
 # ln -sf `pwd`/xsession 	~/.xsession
 
