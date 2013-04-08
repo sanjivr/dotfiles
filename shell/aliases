@@ -1,0 +1,50 @@
+#!/bin/sh
+alias c='clear'
+
+if [ `which vim` ]
+then
+    alias vi='vim'
+fi
+
+
+if [ $__custom_var_os == "Linux" ]
+then
+	LSCOLOROPT="--color"
+elif [ $__custom_var_os == "FreeBSD" ]
+then
+	LSCOLOROPT="-G"
+elif [ $__custom_var_os == "Darwin" ]
+then
+	LSCOLOROPT="-G"
+fi
+
+alias l='ls -ltr $LSCOLOROPT'
+alias ls='ls  $LSCOLOROPT'
+alias la='ls -ltra  $LSCOLOROPT'
+alias grep='grep $LSCOLOROPT'
+alias egrep='egrep $LSCOLOROPT'
+alias fgrep='fgrep $LSCOLOROPT'
+
+if [ `which valgrind` ]
+then
+	alias valgrind='valgrind --tool=memcheck --leak-check=yes  --show-reachable=yes'
+fi	
+
+if [ `which rlwrap` ]
+then
+	alias sqlplus='rlwrap sqlplus'
+fi
+
+if [ $WORK"x" == "truex" ]
+then
+	alias logs='cd /home/y/logs/'
+	alias conf='cd /home/y/conf'
+	alias lib='cd /home/y/lib'
+	alias etc='cd /home/y/etc/'
+	alias htdocs='cd /home/y/share/htdocs'
+	alias pear='cd /home/y/share/pear/Yahoo'
+
+	#Membership
+	alias mc_tests='cd ~/trunk/yahoo/properties/membership/test/features'
+	alias igor='cd ~/membership/membership/Reg/yahoo/idaconfig/package/regLogin/rhelbuildicus/igor'
+fi

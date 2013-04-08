@@ -1,0 +1,9 @@
+Host home
+Hostname proxy.eglbp.corp.yahoo.com
+LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
+Host singledollar-dx singledollar-dx.eglbp
+Hostname singledollar-dx.eglbp.corp.yahoo.com
+Host nitro
+Hostname nitro-gw.blue.ygrid.yahoo.com
+Host pageaboved-dr pageaboved-dr.eglbp
+Hostname pageaboved-dr.eglbp.corp.yahoo.com
