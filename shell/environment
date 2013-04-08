@@ -1,0 +1,74 @@
+#!/bin/sh
+
+#Global
+if [ -d /sbin ]
+then
+	PATH=/sbin:$PATH
+fi
+PATH=$HOME/bin:$PATH
+export SVN_EDITOR=vi
+
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000
+export HISTCONTROL=ignoredups:ignorespace
+
+export PS1="[\u@<\h>:\W]"
+
+# Custom Section based on work, os
+
+__custom_var_hostname=`hostname`
+__custom_var_os=`uname`
+
+#OS Specific
+if [ $__custom_var_os == "Darwin" ]
+then
+	export JAVA_HOME=/Library/Java/Home
+	if [ -f /sw/etc/bash_completion ] 
+	then
+		export BASH_COMPLETION=/sw/etc/bash_completion
+	fi	
+elif [ $__custom_var_os == "Linux" ]	
+	# Add Android SDK Tools Path
+	if [ -d "$HOME/Android/android-sdk/android-sdk-linux/platform-tools" ] 
+	then
+		PATH="$HOME/Android/android-sdk/android-sdk-linux/platform-tools:$PATH"
+	fi
+fi
+
+
+if [ "$__custom_var_hostname" =~ "yahoo\.com" ]
+then
+	export WORK=true
+fi
+
+if [ $WORK"x" == "truex" ]
+then
+	#Oracle Stuff
+	export ORACLE_HOME=/home/y/libexec/oracle/
+	export TNS_ADMIN=/home/y/conf/oracle/
+	export NLS_LANG=.UTF8 
+
+	#SVN
+	export 	SVN_SSH=/usr/local/bin/yssh
+	export  SVNROOT=svn+ssh://svn.corp.yahoo.com/
+
+
+	#YROOT Specific
+	if [ -n $YROOT_NAME ]
+		export PS1="[\u@<\h:$YROOT_NAME>:\W]"
+	fi
+	
+	#OS Specific
+	# WORK - FreeBSD
+	if [ $__custom_var_os == "FreeBSD" ]
+	then
+		export JAVA_HOME=/home/y/libexec32/jdk1.5.0
+		PATH=$PATH:/home/y/libexec/ant/bin
+	# WORK - Linux	
+	elif [ $__custom_var_os == "Linux" ]
+	then
+		export JAVA_HOME=/home/y/
+	fi
+
+fi
+export PATH
