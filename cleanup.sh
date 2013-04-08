@@ -22,3 +22,5 @@ rm -rf ~/.vim/syntax
 rm ~/.bash_aliases
 rm ~/.bash_profile
 rm ~/.bash_login
+
+rm -rf ~/bin
