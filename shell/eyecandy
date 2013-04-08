@@ -1,12 +1,14 @@
 # Set window title for screen
-echo -ne "\ek`hostname -s`\e\\"
+#echo -ne "\ek`hostname -s`\e\\";
 
-if [ $WORK"x" == "truex" ]
-then
-	if [ -n $YROOT_NAME ]
-		echo -ne "\ek$YROOT_NAME\e\\"
-	fi
-elif [ $__custom_var_os == "Linux" ]
+#if [ $WORK"x" == "truex" ]
+#then
+#	if [ -n $YROOT_NAME ]
+#		echo -ne "\ek$YROOT_NAME\e\\";
+#	fi
+#fi	
+
+if [ $__custom_var_os == "Linux" ]
 then
 	# If not running interactively, don't do anything
 	[ -z "$PS1" ] && return
