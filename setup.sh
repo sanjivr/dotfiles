@@ -12,7 +12,9 @@ ln -sf `pwd`/gitconfig 		~/.gitconfig
 ln -sf `pwd`/screenrc 		~/.screenrc
 ln -sf `pwd`/tmux.conf 		~/.tmux.conf
 
+#ln -sf ~/Dropbox/System/Unix/ssh ~/.ssh
 ln -sf `pwd`/ssh_config		~/.ssh/config
+ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_key2
 
 # ln -sf `pwd`/xsession 	~/.xsession
 
