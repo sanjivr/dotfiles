@@ -25,4 +25,4 @@ ln -sf `pwd`/dhexception.vim 	~/.vim/
 mkdir -p ~/.vim/syntax/
 ln -sf `pwd`/pig.vim 		~/.vim/syntax/
 
-ln -sf `pwd`/bin		~/bin
+ln -sf `pwd`/bin		~/
