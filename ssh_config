@@ -23,6 +23,6 @@ Host github.com
 Protocol 2
 IdentityFile ~/.ssh/id_github_rsa
 
-Host office
-Hostname proxy.eglbp.corp.yahoo.com
-LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
+#Host office
+#Hostname proxy.eglbp.corp.yahoo.com
+#LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
