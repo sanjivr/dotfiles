@@ -1,3 +1,9 @@
 [user]
 	name = Sanjiv Raj
 	email = sanjiv.raj@gmail.com
+[diff]
+	tool = vimdiff
+[difftoll]
+	prompt = false
+[alias]
+	d = difftool
