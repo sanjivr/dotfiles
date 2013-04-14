@@ -10,6 +10,7 @@ rm ~/.gitconfig
 rm ~/.screenrc
 rm ~/.tmux.conf
 rm ~/.ssh/config
+rm ~/.subversion/config
 
 
 # rm ~/.xsession

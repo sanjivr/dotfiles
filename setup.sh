@@ -26,3 +26,6 @@ mkdir -p ~/.vim/syntax/
 ln -sf `pwd`/pig.vim 		~/.vim/syntax/
 
 ln -sf `pwd`/bin		~/
+
+mkdir -p ~/.subversion/
+ln -sf `pwd`/subversion.conf 	~/.subversion/config
