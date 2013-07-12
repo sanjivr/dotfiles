@@ -47,7 +47,10 @@ then
 	export NLS_LANG=.UTF8 
 
 	#SVN
-	export 	SVN_SSH=/usr/local/bin/yssh
+	if [ -x /usr/local/bin/yssh ]
+	then
+		export 	SVN_SSH=/usr/local/bin/yssh
+	fi	
 	export  SVNROOT=svn+ssh://svn.corp.yahoo.com/
 
 

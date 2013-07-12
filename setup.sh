@@ -21,8 +21,8 @@ ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
 
 
 ln -sf `pwd`/vimrc  		~/.vimrc
-ln -sf `pwd`/dhexception.vim 	~/.vim/dhexception.vim
 mkdir -p ~/.vim/syntax/
+ln -sf `pwd`/dhexception.vim 	~/.vim/dhexception.vim
 ln -sf `pwd`/pig.vim 		~/.vim/syntax/
 
 ln -sf `pwd`/bin		~/
