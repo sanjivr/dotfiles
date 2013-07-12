@@ -3,7 +3,7 @@
 	email = sanjiv.raj@gmail.com
 [diff]
 	tool = vimdiff
-[difftoll]
+[difftool]
 	prompt = false
 [alias]
 	d = difftool
