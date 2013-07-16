@@ -23,6 +23,7 @@ ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
 ln -sf `pwd`/vimrc  		~/.vimrc
 mkdir -p ~/.vim/syntax/
 ln -sf `pwd`/dhexception.vim 	~/.vim/dhexception.vim
+ln -sf `pwd`/python.vim 	~/.vim/python.vim
 ln -sf `pwd`/pig.vim 		~/.vim/syntax/
 
 ln -sf `pwd`/bin		~/

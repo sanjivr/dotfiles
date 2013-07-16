@@ -20,6 +20,7 @@ set ff=unix
 "source ~/cscope_maps.vim
 
 source ~/.vim/dhexception.vim
+source ~/.vim/python.vim
 
 
 augroup filetypedetect 
