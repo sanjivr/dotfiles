@@ -52,6 +52,7 @@ then
 		export 	SVN_SSH=/usr/local/bin/yssh
 	fi	
 	export  SVNROOT=svn+ssh://svn.corp.yahoo.com/
+	export  FIGNORE=.svn
 
 
 	#YROOT Specific
