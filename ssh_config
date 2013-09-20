@@ -14,6 +14,9 @@ Host *
 Host dev
 Hostname generalwest-dl.champ.corp.yahoo.com
 
+Host os
+Hostname litterbitter.corp.gq1.yahoo.com
+
 Host dev0
 Hostname generalwest-vm0.champ.corp.yahoo.com
 
@@ -35,6 +38,7 @@ Hostname generalwest-vm1.champ.corp.yahoo.com
 Host lap
 Hostname sadtogether-lm.champ.corp.yahoo.com
 
+
 #Host planttrip-lm
 #Hostname planttrip-lm.eglbp.corp.yahoo.com
 
@@ -51,29 +55,22 @@ Hostname sadtogether-lm.champ.corp.yahoo.com
 #
 Host uff-stg
 Hostname stg-prd-dhrb-emt-001.data.gq1.yahoo.com
-ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
 
 
 Host uff-perf
 Hostname rber2.data.ac4.yahoo.com
-ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
 
 Host uff-perf-gq1
 Hostname prf-nprd-dhrb-prsm-002.data.gq1.yahoo.com
-ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
 
 Host strm-stg
 Hostname stg-prd-dhrb-prsm-001.data.gq1.yahoo.com
-ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
-
 
 Host strm-perf
 Hostname rber3.data.ac4.yahoo.com
-ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
 
 Host strm-perf-gq1
 Hostname  prf-nprd-dhrb-prsm-001.data.gq1.yahoo.com 
-ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
 
 Host svn.corp.yahoo.com
 Protocol 2
