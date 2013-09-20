@@ -72,9 +72,33 @@ Hostname rber3.data.ac4.yahoo.com
 Host strm-perf-gq1
 Hostname  prf-nprd-dhrb-prsm-001.data.gq1.yahoo.com 
 
+Host dna
+Hostname kiwiws2.data.gq1.yahoo.com
+ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
+Host strm-prod
+Hostname dhrb-prsm-007.data.gq1.yahoo.com
+ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
+Host bedd
+Hostname dhbedd1.data.gq1.yahoo.com
+ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
+Host dbmaker
+Hostname dhddcmact1.data.corp.sp1.yahoo.com
+#Hostname dhddcmact2.data.corp.sp1.yahoo.com
+#
+Host s4
+Hostname s41003.yss.gq1.yahoo.com
+#Hostname s41004.yss.gq1.yahoo.com
+#Hostname s41008.yss.gq1.yahoo.com
+#Hostname s41009.yss.gq1.yahoo.com
+
 Host svn.corp.yahoo.com
 Protocol 2
 
 Host github.com
 Protocol 2
 IdentityFile ~/.ssh/id_github_rsa
+
+
