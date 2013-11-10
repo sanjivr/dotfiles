@@ -14,6 +14,9 @@ Host *
 Host dev
 Hostname generalwest-dl.champ.corp.yahoo.com
 
+Host os
+Hostname litterbitter.corp.gq1.yahoo.com
+
 Host dev0
 Hostname generalwest-vm0.champ.corp.yahoo.com
 
@@ -35,6 +38,7 @@ Hostname generalwest-vm1.champ.corp.yahoo.com
 Host lap
 Hostname sadtogether-lm.champ.corp.yahoo.com
 
+
 #Host planttrip-lm
 #Hostname planttrip-lm.eglbp.corp.yahoo.com
 
@@ -46,7 +50,6 @@ Hostname sadtogether-lm.champ.corp.yahoo.com
 
 #Host nitro
 #Hostname nitro-gw.blue.ygrid.yahoo.com
-
 
 # Rainbow
 #ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
@@ -68,7 +71,6 @@ Hostname prf-nprd-dhrb-prsm-002.data.gq1.yahoo.com
 
 Host strm-perf-gq1
 Hostname  prf-nprd-dhrb-prsm-001.data.gq1.yahoo.com 
-
 
 Host strm-smoke
 Hostname dhapp1.data.corp.sp1.yahoo.com
