@@ -17,6 +17,8 @@ ln -sf `pwd`/ssh_config		~/.ssh/config
 ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
 
 # ln -sf `pwd`/xsession 	~/.xsession
+ln -sf `pwd`/Xdefaults		~/.Xdefaults
+xrdb .Xdefaults
 
 
 
