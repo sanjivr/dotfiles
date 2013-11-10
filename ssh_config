@@ -4,17 +4,95 @@ Host *
 #PermitLocalCommand yes
 #LocalCommand printf '\033]2;%s\033\\' '%h'
 
-Host bvt.edit.yahoo.com 
-ProxyCommand ssh login1.corp.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+#VPN
+#Host office
+#Hostname proxy.eglbp.corp.yahoo.com
+#LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
 
-Host nitro
-Hostname nitro-gw.blue.ygrid.yahoo.com
+#Dev hosts - Linux/FreeBSD
+#-------------------------
+Host dev
+Hostname generalwest-dl.champ.corp.yahoo.com
 
-Host singledollar-dx singledollar-dx.eglbp
-Hostname singledollar-dx.eglbp.corp.yahoo.com
+Host os
+Hostname litterbitter.corp.gq1.yahoo.com
 
-Host pageaboved-dr pageaboved-dr.eglbp
-Hostname pageaboved-dr.eglbp.corp.yahoo.com
+Host dev0
+Hostname generalwest-vm0.champ.corp.yahoo.com
+
+
+Host dev1
+Hostname generalwest-vm1.champ.corp.yahoo.com
+
+#Host pageaboved-dr pageaboved-dr.eglbp
+#Hostname pageaboved-dr.eglbp.corp.yahoo.com
+
+#Host singledollar-dx singledollar-dx.eglbp
+#Hostname singledollar-dx.eglbp.corp.yahoo.com
+
+#Host partykeep-db
+#Hostname partykeep-db.eglbp.corp.yahoo.com
+
+#Laptops
+#--------
+Host lap
+Hostname sadtogether-lm.champ.corp.yahoo.com
+
+
+#Host planttrip-lm
+#Hostname planttrip-lm.eglbp.corp.yahoo.com
+
+#Host middledegree-lm
+#Hostname middledegree-lm.eglbp.corp.yahoo.com
+
+#Environments
+#------------
+#Host bvt.edit.yahoo.com 
+#ProxyCommand ssh login1.corp.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
+#Host nitro
+#Hostname nitro-gw.blue.ygrid.yahoo.com
+#
+Host uff-stg
+Hostname stg-prd-dhrb-emt-001.data.gq1.yahoo.com
+
+
+Host uff-perf
+Hostname rber2.data.ac4.yahoo.com
+
+Host uff-perf-gq1
+Hostname prf-nprd-dhrb-prsm-002.data.gq1.yahoo.com
+
+Host strm-stg
+Hostname stg-prd-dhrb-prsm-001.data.gq1.yahoo.com
+
+Host strm-perf
+Hostname rber3.data.ac4.yahoo.com
+
+Host strm-perf-gq1
+Hostname  prf-nprd-dhrb-prsm-001.data.gq1.yahoo.com 
+
+Host dna
+Hostname kiwiws2.data.gq1.yahoo.com
+ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
+Host strm-prod
+Hostname dhrb-prsm-007.data.gq1.yahoo.com
+ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
+Host bedd
+Hostname dhbedd1.data.gq1.yahoo.com
+ProxyCommand ssh inventsent.corp.gq1.yahoo.com -oCiphers=arcfour -oClearAllForwardings=yes nc %h %p  
+
+Host dbmaker
+Hostname dhddcmact1.data.corp.sp1.yahoo.com
+#Hostname dhddcmact2.data.corp.sp1.yahoo.com
+#
+Host s4
+Hostname s41003.yss.gq1.yahoo.com
+#Hostname s41004.yss.gq1.yahoo.com
+#Hostname s41008.yss.gq1.yahoo.com
+#Hostname s41009.yss.gq1.yahoo.com
 
 Host svn.corp.yahoo.com
 Protocol 2
@@ -23,6 +101,4 @@ Host github.com
 Protocol 2
 IdentityFile ~/.ssh/id_github_rsa
 
-#Host office
-#Hostname proxy.eglbp.corp.yahoo.com
-#LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
+
