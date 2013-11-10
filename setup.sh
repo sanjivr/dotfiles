@@ -23,8 +23,9 @@ xrdb .Xdefaults
 
 
 ln -sf `pwd`/vimrc  		~/.vimrc
-ln -sf `pwd`/dhexception.vim 	~/.vim/dhexception.vim
 mkdir -p ~/.vim/syntax/
+ln -sf `pwd`/dhexception.vim 	~/.vim/dhexception.vim
+ln -sf `pwd`/python.vim 	~/.vim/python.vim
 ln -sf `pwd`/pig.vim 		~/.vim/syntax/
 
 ln -sf `pwd`/bin		~/
