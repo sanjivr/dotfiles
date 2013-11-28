@@ -97,7 +97,8 @@ Hostname dhrbcm1.bec.data.gq1.yahoo.com
 Host strm-preprod
 Hostname dhrb2.data.bf1.yahoo.com
 
-#Host uff-preprod
+Host uff-preprod
+Hostname dhrb3.data.bf1.yahoo.com
 
 Host strm-system
 Hostname dhmeta1.bec.data.gq1.yahoo.com
