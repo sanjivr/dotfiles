@@ -3,6 +3,7 @@ alias c='clear'
 if [ `which vim > /dev/null 2>&1` ]
 then
     alias vi='vim'
+    alias svim='vim -O'
 fi
 
 
@@ -44,6 +45,7 @@ then
 	alias pear='cd /home/y/share/pear/Yahoo'
 
 	#Rainbow
+	alias sgrep='grep --exclude-dir=*svn* --exclude-dir=*nightly*'
 	alias trunk='cd ~/dev/trunk'
 	#Jump to java src 
 	#find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
