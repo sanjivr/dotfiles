@@ -5,9 +5,9 @@ Host *
 #LocalCommand printf '\033]2;%s\033\\' '%h'
 
 #VPN
-#Host office
-#Hostname proxy.eglbp.corp.yahoo.com
-#LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
+Host office
+Hostname proxy.corp.yahoo.com
+LocalForward 127.0.0.1:1080 socks.yahoo.com:1080
 
 #Dev hosts - Linux/FreeBSD
 #-------------------------
