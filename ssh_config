@@ -1,0 +1,9 @@
+Protocol 2,1 
+
+Host *
+#PermitLocalCommand yes
+#LocalCommand printf '\033]2;%s\033\\' '%h'
+
+Host github.com
+Protocol 2
+IdentityFile ~/.ssh/id_github_rsa
