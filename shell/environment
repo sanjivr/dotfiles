@@ -76,8 +76,11 @@ then
 		export JAVA_HOME=/home/y/libexec32/jdk1.5.0
 	fi
 else	
-	export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
-	export PATH=$PATH:~/scala/sbt/bin
+	if [[ $__custom_var_os == "Linux" ]]
+	then
+		export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
+		export PATH=$PATH:~/scala/sbt/bin
+	fi	
 
 fi
 export PATH
