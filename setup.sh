@@ -35,8 +35,8 @@ ln -sf `pwd`/bin		~/
 
 if [ -d ~/Dropbox/System/Unix/ssh ]
 then
-	ln -sf ~/Dropbox/System/Unix/ssh ~/.ssh
-
+	rm -rf ~/.ssh
+	ln -sf ~/Dropbox/System/Unix/ssh/ ~/.ssh
 fi
 ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
 #ln -sf `pwd`/ssh_config	~/.ssh/config

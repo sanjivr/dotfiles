@@ -21,6 +21,7 @@ rm -f ~/.vim/dhexception.vim
 rm -f ~/.vim/syntax/pig.vim
 rm -rf ~/.vim/syntax
 
+rm -rf ~/.ssh
 # rm -f ~/.ssh/config
 
 # Cleanup - No need for these scripts ever
