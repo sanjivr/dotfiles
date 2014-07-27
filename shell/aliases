@@ -6,14 +6,15 @@ then
     alias svim='vim -O'
 fi
 
+custom_var_os=`uname`
 
-if [ $__custom_var_os == "Linux" ]
+if [[ $__custom_var_os == "Linux" ]]
 then
 	LSCOLOROPT="--color"
-elif [ $__custom_var_os == "FreeBSD" ]
+elif [[ $__custom_var_os == "FreeBSD" ]]
 then
 	LSCOLOROPT="-G"
-elif [ $__custom_var_os == "Darwin" ]
+elif [[ $__custom_var_os == "Darwin" ]]
 then
 	LSCOLOROPT="-G"
 fi
@@ -35,7 +36,7 @@ then
 	alias sqlplus='rlwrap sqlplus'
 fi
 
-if [ $WORK"x" == "truex" ]
+if [[ $WORK"x" == "truex" ]]
 then
 	alias logs='cd /home/y/logs/'
 	alias conf='cd /home/y/conf'
@@ -45,7 +46,7 @@ then
 	alias pear='cd /home/y/share/pear/Yahoo'
 
 	#Rainbow
-	alias sgrep='grep --exclude-dir=*svn* --exclude-dir=*nightly*'
+	alias sgrep='grep --exclude-dir=*svn*
 	alias trunk='cd ~/dev/trunk'
 	#Jump to java src 
 	#find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
