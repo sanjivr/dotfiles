@@ -18,7 +18,7 @@ mkdir -p ~/.subversion/
 ln -sf `pwd`/subversion.conf 	~/.subversion/config
 ln -sf `pwd`/gitconfig 		~/.gitconfig
 
-ln -sf `pwd`/xsession 		~/.xsession
+#ln -sf `pwd`/xsession 		~/.xsession
 ln -sf `pwd`/Xdefaults		~/.Xdefaults
 if [ `which xrdb > /dev/null 2>&1` ]
 then
@@ -39,4 +39,3 @@ then
 	ln -sf ~/Dropbox/System/Unix/ssh/ ~/.ssh
 fi
 ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
-#ln -sf `pwd`/ssh_config	~/.ssh/config
