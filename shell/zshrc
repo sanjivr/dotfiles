@@ -75,3 +75,10 @@ source ~/.shell_startup/aliases
 source ~/.shell_startup/shell
 bindkey "^R" history-incremental-search-backward
 bindkey "^S" history-incremental-search-forward
+
+#Slow cd tab completion
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+compdef -d svn

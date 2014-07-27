@@ -55,9 +55,9 @@ then
 	alias trunk='cd ~/dev/trunk'
 	#Jump to java src 
 	#find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
-	alias src='cd $(find . -name *rainbow -type d -path *src*main* )'
+	alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
 	#Jump to java tests
-	alias test='cd $(find . -name *rainbow -type d -path *src*test* )'
+	alias test='cd $(find . -name "*rainbow" -type d -path "*src*test*" )'
 	#Jumpt to srctop of library
 	alias upsrc="cd \$(pwd | awk -Fsrc '{print \$1}')"
 
