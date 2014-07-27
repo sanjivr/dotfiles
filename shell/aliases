@@ -7,7 +7,6 @@ then
 fi
 
 custom_var_os=`uname`
-echo $custom_var_os
 
 if [[ $__custom_var_os == "Linux" ]]
 then
@@ -27,12 +26,12 @@ alias grep='grep $LSCOLOROPT'
 alias egrep='egrep $LSCOLOROPT'
 alias fgrep='fgrep $LSCOLOROPT'
 
-if [[ `which valgrind > /dev/null 2>&1` ]]
+if [ `which valgrind > /dev/null 2>&1` ]
 then
 	alias valgrind='valgrind --tool=memcheck --leak-check=yes  --show-reachable=yes'
 fi	
 
-if [[ `which rlwrap > /dev/null 2>&1` ]]
+if [ `which rlwrap > /dev/null 2>&1` ]
 then
 	alias sqlplus='rlwrap sqlplus'
 fi
