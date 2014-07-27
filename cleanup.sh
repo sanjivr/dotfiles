@@ -5,6 +5,7 @@ rm -f ~/.bash_profile
 rm -f ~/.bashrc
 
 rm -f ~/.zshenv
+rm -f ~/.zshrc
 
 rm -f ~/.screenrc
 rm -f ~/.tmux.conf
