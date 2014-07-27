@@ -36,16 +36,12 @@ then
 	alias sqlplus='rlwrap sqlplus'
 fi
 
-<<<<<<< HEAD
 svn2http() {
 	httpurl=$(svn info ${1} 2>/dev/null | grep ^URL | awk -F"URL:" '{print $2}' | sed 's/svn+ssh/http/' | sed 's/svn.corp.yahoo.com/svn.corp.yahoo.com\/view/')
 	echo ${httpurl}
 }
 
-if [ $WORK"x" == "truex" ]
-=======
 if [[ $WORK"x" == "truex" ]]
->>>>>>> afaacc51be2655babd7bce891610e86c94d59067
 then
 	alias logs='cd /home/y/logs/'
 	alias conf='cd /home/y/conf'
@@ -55,7 +51,7 @@ then
 	alias pear='cd /home/y/share/pear/Yahoo'
 
 	#Rainbow
-	alias sgrep='grep --exclude-dir=*svn*
+	alias sgrep='grep --exclude-dir=*svn*'
 	alias trunk='cd ~/dev/trunk'
 	#Jump to java src 
 	#find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
