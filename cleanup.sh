@@ -1,28 +1,28 @@
 rm -rf ~/.shell_startup
-rm ~/.inputrc
+rm -f ~/.inputrc
 
-rm ~/.bash_profile
-rm ~/.bashrc
+rm -f ~/.bash_profile
+rm -f ~/.bashrc
 
-rm ~/.screenrc
-rm ~/.tmux.conf
+rm -f ~/.screenrc
+rm -f ~/.tmux.conf
 
-rm ~/.subversion/config
-rm ~/.gitconfig
+rm -f ~/.subversion/config
+rm -f ~/.gitconfig
 
-rm ~/.xsession
-rm ~/.Xdefaults
+rm -f ~/.xsession
+rm -f ~/.Xdefaults
 
-rm ~/.vimrc
-rm ~/.vim/dhexception.vim
-rm ~/.vim/syntax/pig.vim
+rm -f ~/.vimrc
+rm -f ~/.vim/dhexception.vim
+rm -f ~/.vim/syntax/pig.vim
 rm -rf ~/.vim/syntax
 
-# rm ~/.ssh/config
+# rm -f ~/.ssh/config
 
 # Cleanup - No need for these scripts ever
-rm ~/.bash_aliases
-rm ~/.bash_profile
-rm ~/.bash_login
+rm -f ~/.bash_aliases
+rm -f ~/.bash_profile
+rm -f ~/.bash_login
 
 rm -rf ~/bin

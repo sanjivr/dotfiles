@@ -17,7 +17,10 @@ ln -sf `pwd`/gitconfig 		~/.gitconfig
 
 ln -sf `pwd`/xsession 		~/.xsession
 ln -sf `pwd`/Xdefaults		~/.Xdefaults
-xrdb .Xdefaults
+if [ `which xrdb > /dev/null 2>&1` ]
+then
+	xrdb .Xdefaults
+fi
 
 ln -sf `pwd`/vimrc  		~/.vimrc
 ln -sf `pwd`/dhexception.vim 	~/.vim/dhexception.vim
@@ -27,7 +30,7 @@ ln -sf `pwd`/pig.vim 		~/.vim/syntax/
 
 ln -sf `pwd`/bin		~/
 
-if [ -d ~/Dropbox/System/Unix/ssh]
+if [ -d ~/Dropbox/System/Unix/ssh ]
 then
 	ln -sf ~/Dropbox/System/Unix/ssh ~/.ssh
 
