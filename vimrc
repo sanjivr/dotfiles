@@ -1,4 +1,4 @@
-"syntax on
+syntax on
 syntax enable
 
 set vb
@@ -7,10 +7,10 @@ set ruler
 set hlsearch 
 set ignorecase
 
-"set bs=2
-"set ts=4
-"set shiftwidth=4
-"set expandtab
+set bs=2
+set ts=4
+set shiftwidth=4
+set expandtab
 
 set autoindent
 set cindent
