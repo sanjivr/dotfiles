@@ -72,6 +72,9 @@ then
 	then
 		export JAVA_HOME=/home/y/
 	fi
+else	
+	export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
+	export PATH=$PATH:~/scala/sbt/bin
 
 fi
 export PATH
