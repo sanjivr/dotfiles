@@ -1,4 +1,4 @@
-"syntax on
+syntax on
 syntax enable
 
 set vb

@@ -6,25 +6,29 @@ fi
 PATH=$HOME/bin:$PATH
 export SVN_EDITOR=vi
 
-export HISTFILESIZE=1000000000
-export HISTSIZE=1000000
-export HISTCONTROL=ignoredups:ignorespace
-
-export PS1="[\u@<\h>:\W]"
+#Global, but shell specific
+if [ -n "$BASH_VERSION" ]; then
+	export HISTFILESIZE=1000000000
+	export HISTSIZE=1000000
+	export HISTCONTROL=ignoredups:ignorespace
+	export PS1="[\u@<\h>:\W]"
+fi
 
 # Custom Section based on work, os
 
 __custom_var_os=`uname`
 
 #OS Specific
-if [ $__custom_var_os == "Darwin" ]
+if [[ $__custom_var_os == "Darwin" ]]
 then
 	export JAVA_HOME=/Library/Java/Home
-	if [ -f /sw/etc/bash_completion ] 
-	then
-		export BASH_COMPLETION=/sw/etc/bash_completion
-	fi	
-elif [ $__custom_var_os == "Linux" ]	
+	if [ -n "$BASH_VERSION" ]; then
+		if [ -f /sw/etc/bash_completion ] 
+		then
+			export BASH_COMPLETION=/sw/etc/bash_completion
+		fi	
+	fi
+elif [[ $__custom_var_os == "Linux" ]]
 then
 	# Add Android SDK Tools Path
 	if [ -d "$HOME/Android/android-sdk/android-sdk-linux/platform-tools" ] 
@@ -39,7 +43,7 @@ then
 	export WORK=true
 fi
 
-if [ $WORK"x" == "truex" ]
+if [[ $WORK"x" == "truex" ]]
 then
 	#Oracle Stuff
 	export ORACLE_HOME=/home/y/libexec/oracle/
@@ -52,26 +56,31 @@ then
 		export 	SVN_SSH=/usr/local/bin/yssh
 	fi	
 	export  SVNROOT=svn+ssh://svn.corp.yahoo.com/
-	export  FIGNORE=.svn
+	export  FIGNORE=$FIGNORE:.svn
 
 
-	#YROOT Specific
+	#YROOT Specific, 
 	if [ -n $YROOT_NAME ]
 	then
-		export PS1="[\u@<\h:$YROOT_NAME>:\W]"
+		if [ -n "$BASH_VERSION" ]; then
+			export PS1="[\u@<\h:$YROOT_NAME>:\W]"
+		fi
 	fi
 	
 	#OS Specific
-	# WORK - FreeBSD
-	if [ $__custom_var_os == "FreeBSD" ]
-	then
-		export JAVA_HOME=/home/y/libexec32/jdk1.5.0
-		PATH=$PATH:/home/y/libexec/ant/bin
-	# WORK - Linux	
-	elif [ $__custom_var_os == "Linux" ]
+	if [[ $__custom_var_os == "Linux" ]]
 	then
 		export JAVA_HOME=/home/y/
+	elif [[ $__custom_var_os == "FreeBSD" ]]
+	then
+		export JAVA_HOME=/home/y/libexec32/jdk1.5.0
 	fi
+else	
+	if [[ $__custom_var_os == "Linux" ]]
+	then
+		export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
+		export PATH=$PATH:~/scala/sbt/bin
+	fi	
 
 fi
 export PATH

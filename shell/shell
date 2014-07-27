@@ -1,0 +1,4 @@
+#vi mode in shell 
+set -o vi
+
+INPUTRC=~/.inputrc
