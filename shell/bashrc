@@ -29,7 +29,7 @@ shopt -s checkwinsize
 
 PROMPT_COMMAND='history -a'
 
-if [ $__custom_var_os == "Darwin" ]
+if [[ $__custom_var_os == "Darwin" ]]
 then
 	if [ -f /sw/etc/bash_completion ]
 	then
@@ -37,7 +37,7 @@ then
 	fi
 fi
 
-if [ $__custom_var_os == "Linux" ]
+if [[ $__custom_var_os == "Linux" ]]
 then
 	if [ -f /etc/bash_completion ] && ! shopt -oq posix 
 	then

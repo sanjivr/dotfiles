@@ -8,6 +8,8 @@ ln -sf `pwd`/shell/inputrc 	~/.inputrc
 ln -sf `pwd`/shell/bash_profile ~/.bash_profile
 ln -sf `pwd`/shell/bashrc 	~/.bashrc
 
+ln -sf `pwd`/shell/environment  ~/.zshenv
+
 ln -sf `pwd`/screenrc 		~/.screenrc
 ln -sf `pwd`/tmux.conf 		~/.tmux.conf
 

@@ -19,7 +19,7 @@ fi
 __custom_var_os=`uname`
 
 #OS Specific
-if [ $__custom_var_os == "Darwin" ]
+if [[ $__custom_var_os == "Darwin" ]]
 then
 	export JAVA_HOME=/Library/Java/Home
 	if [ -n "$BASH_VERSION" ]; then
@@ -28,7 +28,7 @@ then
 			export BASH_COMPLETION=/sw/etc/bash_completion
 		fi	
 	fi
-elif [ $__custom_var_os == "Linux" ]	
+elif [[ $__custom_var_os == "Linux" ]]
 then
 	# Add Android SDK Tools Path
 	if [ -d "$HOME/Android/android-sdk/android-sdk-linux/platform-tools" ] 
@@ -43,7 +43,7 @@ then
 	export WORK=true
 fi
 
-if [ $WORK"x" == "truex" ]
+if [[ $WORK"x" == "truex" ]]
 then
 	#Oracle Stuff
 	export ORACLE_HOME=/home/y/libexec/oracle/
@@ -68,10 +68,10 @@ then
 	fi
 	
 	#OS Specific
-	if [ $__custom_var_os == "Linux" ]
+	if [[ $__custom_var_os == "Linux" ]]
 	then
 		export JAVA_HOME=/home/y/
-	elif [ $__custom_var_os == "FreeBSD" ]
+	elif [[ $__custom_var_os == "FreeBSD" ]]
 	then
 		export JAVA_HOME=/home/y/libexec32/jdk1.5.0
 	fi

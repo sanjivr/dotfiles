@@ -4,6 +4,8 @@ rm -f ~/.inputrc
 rm -f ~/.bash_profile
 rm -f ~/.bashrc
 
+rm -f ~/.zshenv
+
 rm -f ~/.screenrc
 rm -f ~/.tmux.conf
 
