@@ -13,24 +13,23 @@ fi
 #Aliases
 . ~/.shell_startup/aliases
 
+#Common Shell Startup
+. ~/.shell_startup/shell
+
 #
 # Start Bash Options
 #
 
-#vi mode in shell
-set -o vi
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+# resize window after each command if reqd,
+# updates the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 PROMPT_COMMAND='history -a'
-INPUTRC=~/.inputrc
 
-if [ $__custom_var_os == "Darwin" ]
+if [[ $__custom_var_os == "Darwin" ]]
 then
 	if [ -f /sw/etc/bash_completion ]
 	then
@@ -38,7 +37,7 @@ then
 	fi
 fi
 
-if [ $__custom_var_os == "Linux" ]
+if [[ $__custom_var_os == "Linux" ]]
 then
 	if [ -f /etc/bash_completion ] && ! shopt -oq posix 
 	then
