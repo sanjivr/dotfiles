@@ -18,13 +18,17 @@ rm -f ~/.Xdefaults
 
 rm -f ~/.curlrc
 
+# rm -rf ~/.ssh
+# rm -f ~/.ssh/config
+
+
 rm -f ~/.vimrc
+rm -rf ~/.vim/autoload
+rm -rf ~/.vim/bundle
 rm -f ~/.vim/dhexception.vim
 rm -f ~/.vim/syntax/pig.vim
 rm -rf ~/.vim/syntax
 
-# rm -rf ~/.ssh
-# rm -f ~/.ssh/config
 
 # Cleanup - No need for these scripts ever
 rm -f ~/.bash_aliases

@@ -27,17 +27,29 @@ fi
 
 ln -sf `pwd`/curlrc		~/.curlrc
 
-ln -sf `pwd`/vimrc  		~/.vimrc
-ln -sf `pwd`/dhexception.vim 	~/.vim/dhexception.vim
-ln -sf `pwd`/python.vim 	~/.vim/python.vim
-mkdir -p 			~/.vim/syntax/
-ln -sf `pwd`/pig.vim 		~/.vim/syntax/
-
-ln -sf `pwd`/bin		~/
-
 if [ -d ~/Dropbox/System/Unix/ssh ]
 then
 	rm -rf ~/.ssh
 	ln -sf ~/Dropbox/System/Unix/ssh/ ~/.ssh
 fi
 ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
+
+ln -sf `pwd`/vimrc  		        ~/.vimrc
+mkdir -p                            ~/.vim/autoload
+if [ ! -f ~/.vim/autoload/pathogen.vim ]
+then
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
+mkdir -p                            ~/.vim/bundle
+if [ ! -d ~/.vim/bundle/nerdtree ]
+then
+    git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+fi
+
+ln -sf `pwd`/dhexception.vim 	    ~/.vim/dhexception.vim
+ln -sf `pwd`/python.vim 	        ~/.vim/python.vim
+mkdir -p                            ~/.vim/syntax/
+ln -sf `pwd`/pig.vim 		        ~/.vim/syntax/
+
+
+ln -sf `pwd`/bin		~/
