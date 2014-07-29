@@ -45,7 +45,7 @@ ZSH_THEME="kafeitu"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,6 +82,8 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
 compdef -d svn
+
+zstyle :omz:plugins:ssh-agent identities identity id_rsa id_dsa id_github_rsa
 
 zstyle ':completion:*' users sanjivr y 
 setopt nocdablevars
