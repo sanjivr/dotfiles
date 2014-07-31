@@ -47,7 +47,7 @@ then
 fi
 if [ ! -d ~/.vim/bundle/vim-airline ]
 then
-    git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+    git clone git@github.com:bling/vim-airline ~/.vim/bundle/vim-airline
 fi
 
 ln -sf `pwd`/dhexception.vim 	    ~/.vim/dhexception.vim
