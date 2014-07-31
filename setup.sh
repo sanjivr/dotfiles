@@ -45,6 +45,10 @@ if [ ! -d ~/.vim/bundle/nerdtree ]
 then
     git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 fi
+if [ ! -d ~/.vim/bundle/vim-airline ]
+then
+    git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+fi
 
 ln -sf `pwd`/dhexception.vim 	    ~/.vim/dhexception.vim
 ln -sf `pwd`/python.vim 	        ~/.vim/python.vim
