@@ -6,6 +6,7 @@ set number
 set ruler
 set hlsearch 
 set ignorecase
+set nocompatible
 
 set bs=indent,eol,start
 set tabstop=4
