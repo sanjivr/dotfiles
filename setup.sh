@@ -8,6 +8,7 @@ ln -sf `pwd`/shell/inputrc 	~/.inputrc
 ln -sf `pwd`/shell/bash_profile ~/.bash_profile
 ln -sf `pwd`/shell/bashrc 	~/.bashrc
 
+ln -sf `pwd`/oh-my-zsh		~/.oh-my-zsh
 ln -sf `pwd`/shell/environment  ~/.zshenv
 ln -sf `pwd`/shell/zshrc	~/.zshrc
 
@@ -19,13 +20,19 @@ ln -sf `pwd`/subversion.conf 	~/.subversion/config
 ln -sf `pwd`/gitconfig 		~/.gitconfig
 
 #ln -sf `pwd`/xsession 		~/.xsession
+ln -sf `pwd`/solarized      	~/.solarized
 ln -sf `pwd`/Xdefaults		~/.Xdefaults
 if [ `which xrdb > /dev/null 2>&1` ]
 then
 	xrdb .Xdefaults
 fi
 
+ln -sf `pwd`/vim                ~/.vim
+ln -sf ~/.vim/vimrc  		~/.vimrc
+
 ln -sf `pwd`/curlrc		~/.curlrc
+
+ln -sf `pwd`/bin		~/
 
 if [ -d ~/Dropbox/System/Unix/ssh ]
 then
@@ -34,30 +41,4 @@ then
 fi
 ln -sf ~/.ssh/authorized_keys 	~/.ssh/authorized_keys2
 
-ln -sf `pwd`/vimrc  		        ~/.vimrc
-mkdir -p                            ~/.vim/autoload
-if [ ! -f ~/.vim/autoload/pathogen.vim ]
-then
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-fi
-mkdir -p                            ~/.vim/bundle
-if [ ! -d ~/.vim/bundle/nerdtree ]
-then
-    git clone git@github.com:scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-fi
-if [ ! -d ~/.vim/bundle/vim-airline ]
-then
-    git clone git@github.com:bling/vim-airline ~/.vim/bundle/vim-airline
-fi
-if [ ! -d ~/.vim/bundle/vim-colors-solarized ]
-then
-    git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
-fi
 
-ln -sf `pwd`/dhexception.vim 	    ~/.vim/dhexception.vim
-ln -sf `pwd`/python.vim 	        ~/.vim/python.vim
-mkdir -p                            ~/.vim/syntax/
-ln -sf `pwd`/pig.vim 		        ~/.vim/syntax/
-
-
-ln -sf `pwd`/bin		~/

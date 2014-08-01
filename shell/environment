@@ -1,4 +1,5 @@
 #Global
+export TERM="xterm-256color"
 if [ -d /sbin ]
 then
 	PATH=/sbin:$PATH

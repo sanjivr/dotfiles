@@ -23,16 +23,13 @@ rm -f ~/.curlrc
 
 
 rm -f ~/.vimrc
-rm -rf ~/.vim/autoload
-rm -rf ~/.vim/bundle
-rm -f ~/.vim/dhexception.vim
-rm -f ~/.vim/syntax/pig.vim
-rm -rf ~/.vim/syntax
+rm -rf ~/.vim/
 
 
 # Cleanup - No need for these scripts ever
 rm -f ~/.bash_aliases
 rm -f ~/.bash_profile
 rm -f ~/.bash_login
+
 
 rm -rf ~/bin

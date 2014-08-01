@@ -1,3 +1,6 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 syntax on
 syntax enable
 
@@ -20,8 +23,6 @@ set ff=unix
 "se nobomb
 "source ~/cscope_maps.vim
 "highlight Normal ctermfg=darkgrey  ctermbg=black
-
-execute pathogen#infect()
 
 source ~/.vim/dhexception.vim
 source ~/.vim/python.vim
