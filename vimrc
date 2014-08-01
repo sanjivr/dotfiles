@@ -31,6 +31,7 @@ augroup filetypedetect
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
 augroup END
 
+"NERDTree
 "Open NERDTree on start
 autocmd VimEnter * NERDTree
 "Focus on file when opened with NERDTree
@@ -41,7 +42,11 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "Close vim if only NERDTree window is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+"Airline
+let g:airline_theme='dark'
+
 "Solarized
-"set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
