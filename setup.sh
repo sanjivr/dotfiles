@@ -49,6 +49,10 @@ if [ ! -d ~/.vim/bundle/vim-airline ]
 then
     git clone git@github.com:bling/vim-airline ~/.vim/bundle/vim-airline
 fi
+if [ ! -d ~/.vim/bundle/vim-colors-solarized ]
+then
+    git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
+fi
 
 ln -sf `pwd`/dhexception.vim 	    ~/.vim/dhexception.vim
 ln -sf `pwd`/python.vim 	        ~/.vim/python.vim
