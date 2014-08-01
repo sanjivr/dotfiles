@@ -13,7 +13,8 @@ ln -sf `pwd`/shell/environment  ~/.zshenv
 ln -sf `pwd`/shell/zshrc        ~/.zshrc
 
 ln -sf `pwd`/screenrc           ~/.screenrc
-ln -sf `pwd`/tmux.conf          ~/.tmux.conf
+cat tmux.conf   >               ~/.tmux.conf
+cat solarized/tmux/tmuxcolors-256.conf >> ~/.tmux.conf
 
 mkdir -p                        ~/.subversion/
 ln -sf `pwd`/subversion.conf    ~/.subversion/config

@@ -14,12 +14,12 @@ rm -f ~/.tmux.conf
 rm -f ~/.subversion/config
 rm -f ~/.gitconfig
 
-rm -r ~/.solarized
+rm -f ~/.solarized
 rm -f ~/.xsession
 rm -f ~/.Xdefaults
 
 rm -f ~/.vimrc
-rm -rf ~/.vim/
+rm -f ~/.vim
 
 rm -f ~/.curlrc
 
