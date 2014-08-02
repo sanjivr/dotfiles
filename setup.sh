@@ -25,7 +25,7 @@ ln -sf `pwd`/solarized          ~/.solarized
 ln -sf `pwd`/Xdefaults          ~/.Xdefaults
 if [ `which xrdb > /dev/null 2>&1` ]
 then
-    xrdb .Xdefaults
+    xrdb ~/.Xdefaults
 fi
 
 ln -sf `pwd`/vim                ~/.vim
