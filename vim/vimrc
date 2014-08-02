@@ -51,3 +51,7 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+"Disable Background Color Erase
+"Fpr Solarized inside tmux
+set t_ut=
+

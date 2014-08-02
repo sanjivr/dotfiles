@@ -6,6 +6,8 @@ then
     alias svim='vim -O'
 fi
 
+alias tmux='tmux -u'
+
 custom_var_os=`uname`
 
 if [[ $__custom_var_os == "Linux" ]]
