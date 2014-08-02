@@ -22,10 +22,10 @@ ln -sf `pwd`/gitconfig          ~/.gitconfig
 
 #ln -sf `pwd`/xsession          ~/.xsession
 ln -sf `pwd`/solarized          ~/.solarized
-ln -sf `pwd`/Xdefaults          ~/.Xdefaults
+ln -sf `pwd`/Xresources         ~/.Xresources
 if [ `which xrdb > /dev/null 2>&1` ]
 then
-    xrdb ~/.Xdefaults
+    xrdb ~/.Xresources
 fi
 
 ln -sf `pwd`/vim                ~/.vim

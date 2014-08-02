@@ -16,7 +16,7 @@ rm -f ~/.gitconfig
 
 rm -f ~/.solarized
 rm -f ~/.xsession
-rm -f ~/.Xdefaults
+rm -f ~/.Xresources
 
 rm -f ~/.vimrc
 rm -f ~/.vim
