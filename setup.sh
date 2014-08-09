@@ -14,7 +14,7 @@ ln -sf `pwd`/shell/zshrc        ~/.zshrc
 
 ln -sf `pwd`/screenrc           ~/.screenrc
 cat tmux.conf   >               ~/.tmux.conf
-cat solarized/tmux/tmuxcolors-dark.conf >> ~/.tmux.conf
+cat solarized/tmux/tmuxcolors-256.conf >> ~/.tmux.conf
 
 mkdir -p                        ~/.subversion/
 ln -sf `pwd`/subversion.conf    ~/.subversion/config
