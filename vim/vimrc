@@ -16,6 +16,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+set textwidth=120
+set formatoptions+=t
+"set colorcolumn=120
+"Highlight any lines longer than 120 chars
+:2mat ErrorMsg '\%121v.'
+:au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
+
 set autoindent
 set cindent
 
@@ -42,6 +49,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "Close vim if only NERDTree window is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 
 "Airline
 let g:airline_theme='dark'

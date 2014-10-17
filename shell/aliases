@@ -12,13 +12,13 @@ custom_var_os=`uname`
 
 if [[ $__custom_var_os == "Linux" ]]
 then
-	LSCOLOROPT="--color"
+    LSCOLOROPT="--color"
 elif [[ $__custom_var_os == "FreeBSD" ]]
 then
-	LSCOLOROPT="-G"
+    LSCOLOROPT="-G"
 elif [[ $__custom_var_os == "Darwin" ]]
 then
-	LSCOLOROPT="-G"
+    LSCOLOROPT="-G"
 fi
 
 alias l='ls -ltr $LSCOLOROPT'
@@ -30,44 +30,45 @@ alias fgrep='fgrep $LSCOLOROPT'
 
 if [ `which valgrind > /dev/null 2>&1` ]
 then
-	alias valgrind='valgrind --tool=memcheck --leak-check=yes  --show-reachable=yes'
-fi	
+    alias valgrind='valgrind --tool=memcheck --leak-check=yes  --show-reachable=yes'
+fi  
 
 if [ `which rlwrap > /dev/null 2>&1` ]
 then
-	alias sqlplus='rlwrap sqlplus'
+    alias sqlplus='rlwrap sqlplus'
 fi
 
 svn2http() {
-	httpurl=$(svn info ${1} 2>/dev/null | grep ^URL | awk -F"URL:" '{print $2}' | sed 's/svn+ssh/http/' | sed 's/svn.corp.yahoo.com/svn.corp.yahoo.com\/view/')
-	echo ${httpurl}
+    httpurl=$(svn info ${1} 2>/dev/null | grep ^URL | awk -F"URL:" '{print $2}' | sed 's/svn+ssh/http/' | sed 's/svn.corp.yahoo.com/svn.corp.yahoo.com\/view/')
+    echo ${httpurl}
 }
 
 if [[ $WORK"x" == "truex" ]]
 then
-	alias logs='cd /home/y/logs/'
-	alias conf='cd /home/y/conf'
-	alias lib='cd /home/y/lib'
-	alias etc='cd /home/y/etc/'
-	alias htdocs='cd /home/y/share/htdocs'
-	alias pear='cd /home/y/share/pear/Yahoo'
+    alias logs='cd /home/y/logs/'
+    alias conf='cd /home/y/conf'
+    alias lib='cd /home/y/lib'
+    alias etc='cd /home/y/etc/'
+    alias htdocs='cd /home/y/share/htdocs'
+    alias pear='cd /home/y/share/pear/Yahoo'
 
-	#Rainbow
-	alias sgrep='grep --exclude-dir=*svn*'
-	alias trunk='cd ~/dev/trunk'
-	#Jump to java src 
-	#find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
-	alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
-	#Jump to java tests
-	alias test='cd $(find . -name "*rainbow" -type d -path "*src*test*" )'
-	#Jumpt to srctop of library
-	alias upsrc="cd \$(pwd | awk -Fsrc '{print \$1}')"
+    #Rainbow
+    alias sgrep='grep --exclude-dir=*svn*'
+    #alias trunk='cd ~/dev/trunk'
+    alias repo='cd ~/git/dhrainbow'
+    #Jump to java src 
+    #find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
+    alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
+    #Jump to java tests
+    alias test='cd $(find . -name "*rainbow" -type d -path "*src*test*" | grep -v resource )'
+    #Jumpt to srctop of library
+    alias upsrc="cd \$(pwd | awk -Fsrc '{print \$1}')"
 
-	#svn
-	alias svndiff='svn diff --diff-cmd ~/bin/diffwrap.sh'
-	alias svnhttp='svn2http'
+    #svn
+    alias svndiff='svn diff --diff-cmd ~/bin/diffwrap.sh'
+    alias svnhttp='svn2http'
 
-	function svnlog() {
-		svn log $1 $2 | perl -l40pe 's/^-+/\n/'
-	}
+    function svnlog() {
+        svn log $1 $2 | perl -l40pe 's/^-+/\n/'
+    }
 fi
