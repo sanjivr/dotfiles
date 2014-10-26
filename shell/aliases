@@ -54,7 +54,7 @@ then
 
     #Rainbow
     alias sgrep='grep --exclude-dir=*svn*'
-    #alias trunk='cd ~/dev/trunk'
+    alias trunk='cd ~/svn/trunk'
     alias repo='cd ~/git/dhrainbow'
     #Jump to java src 
     #find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
