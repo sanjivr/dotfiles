@@ -1,3 +1,4 @@
+git submodule update --init
 mkdir -p                        ~/.shell_startup
 ln -sf `pwd`/shell/aliases      ~/.shell_startup/aliases
 ln -sf `pwd`/shell/shell        ~/.shell_startup/shell
@@ -39,7 +40,10 @@ if [ -d ~/Dropbox/System/Unix/ssh ]
 then
     rm -rf ~/.ssh
     ln -sf ~/Dropbox/System/Unix/ssh/ ~/.ssh
+else    
+    echo "COPY SSH KEYS Manually"
 fi
 ln -sf ~/.ssh/authorized_keys   ~/.ssh/authorized_keys2
 
-
+echo "On a new host:"
+echo "> Change shell to zsh via either chsh or /etc/passwd"
