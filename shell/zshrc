@@ -95,4 +95,6 @@ PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%n%{$fg[cyan]%}@%{$fg_bold[green
 ➜%{$reset_color%} '
 
 #chef environment
-eval "$(chef shell-init zsh)"
+if (( $+commands[chef] )) ; then
+    eval "$(chef shell-init zsh)"
+fi
