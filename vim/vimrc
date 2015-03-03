@@ -34,6 +34,7 @@ set ff=unix
 source ~/.vim/dhexception.vim
 source ~/.vim/python.vim
 
+au FileType ruby setl sw=2 sts=2
 
 augroup filetypedetect 
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
@@ -41,7 +42,7 @@ augroup END
 
 "NERDTree
 "Open NERDTree on start
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 "Focus on file when opened with NERDTree
 autocmd VimEnter * wincmd p
 "Open NERDTree on start even with no input files
