@@ -1,9 +1,14 @@
 [user]
 	name = Sanjiv Raj
-	email = sanjiv.raj@gmail.com
+#	email = sanjivr@yahoo-inc.com
+    email = sanjiv.raj@gmail.com
 [diff]
 	tool = vimdiff
 [difftool]
 	prompt = false
 [alias]
 	d = difftool
+[filter "media"]
+    required = true
+    clean = git media clean %f
+    smudge = git media smudge %f 
