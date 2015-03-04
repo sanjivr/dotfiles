@@ -1,0 +1,52 @@
+#!/bin/bash
+function pull {
+    for i in `\ls` ; 
+    do 
+      cd ${i} ; 
+      echo ${i}; 
+      git checkout master;
+      git pull;
+      cd - > /dev/null; 
+    done
+}
+
+function branches {
+    for i in `ls` ; 
+    do 
+      cd ${i} ; 
+      branches=$(git branch | wc -l)
+      if [ ${branches} -gt 1 ] 
+      then
+        echo ${i}; 
+        git branch
+      fi
+      cd - > /dev/null; 
+    done
+}
+
+function status {
+    for i in `ls`;
+    do
+        cd ${i}
+        git status -s
+        cd - > /dev/null;
+   done     
+}
+
+while getopts ":pbs" opt; 
+do
+    case ${opt} in
+        p)
+            pull
+        ;;
+        b)
+            branches
+        ;;
+        s)
+            status
+        ;;    
+        \?)
+        echo "Invalid option"
+        ;;
+    esac    
+done
