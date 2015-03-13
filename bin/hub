@@ -28,7 +28,12 @@ function status {
     for i in `ls`;
     do
         cd ${i}
-        git status -s
+        modified=$(git status -s | wc -l)
+        if [ ${modified} -gt 0 ]
+        then
+            echo ${i}
+            git status -s
+        fi
         cd - > /dev/null;
    done     
 }
