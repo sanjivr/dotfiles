@@ -29,6 +29,10 @@ then
 			export BASH_COMPLETION=/sw/etc/bash_completion
 		fi	
 	fi
+    if [ -d "/Library/Frameworks/Python.framework/Versions/2.7/bin" ]
+    then    
+        PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin/:$PATH"
+    fi
 elif [[ $__custom_var_os == "Linux" ]]
 then
 	# Add Android SDK Tools Path
