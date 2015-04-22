@@ -20,6 +20,7 @@ cat solarized/tmux/tmuxcolors-256.conf >> ~/.tmux.conf
 mkdir -p                        ~/.subversion/
 ln -sf `pwd`/subversion.conf    ~/.subversion/config
 ln -sf `pwd`/gitconfig          ~/.gitconfig
+ln -sf `pwd`/gitignore_global   ~/.gitignore_global
 
 #ln -sf `pwd`/xsession          ~/.xsession
 ln -sf `pwd`/solarized          ~/.solarized

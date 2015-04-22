@@ -12,3 +12,5 @@
     required = true
     clean = git media clean %f
     smudge = git media smudge %f 
+[core]
+	excludesfile = ~sanjivr/.gitignore_global
