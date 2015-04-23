@@ -13,6 +13,7 @@ rm -f ~/.tmux.conf
 
 rm -f ~/.subversion/config
 rm -f ~/.gitconfig
+rm -f ~/.gitignore_global
 
 rm -f ~/.solarized
 rm -f ~/.xsession
