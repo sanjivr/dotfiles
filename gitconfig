@@ -1,6 +1,6 @@
 [user]
     name = Sanjiv Raj
-#      email = sanjivr@yahoo-inc.com
+    #email = sanjivr@yahoo-inc.com
     email = sanjiv.raj@gmail.com
 [diff]
     tool = vimdiff

@@ -23,8 +23,8 @@ set formatoptions+=t
 :2mat ErrorMsg '\%121v.'
 :au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
 
+filetype indent plugin on
 set autoindent
-set cindent
 
 set ff=unix
 "se nobomb

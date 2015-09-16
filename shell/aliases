@@ -66,6 +66,7 @@ then
     alias test='cd $(find . -name "*rainbow" -type d -path "*src*test*" | grep -v resource )'
     #Jumpt to srctop of library
     alias upsrc="cd \$(pwd | awk -Fsrc '{print \$1}')"
+    alias blacklist="curl -q -s https://dhrainbow-config.zenfs.com/blacklist/hostlist.txt"
 
     #svn
     alias svndiff='svn diff --diff-cmd ~/bin/diffwrap.sh'
