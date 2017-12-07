@@ -77,8 +77,14 @@ source $ZSH/oh-my-zsh.sh
 #
 source ~/.shell_startup/aliases
 source ~/.shell_startup/shell
-bindkey "^R" history-incremental-search-backward
-bindkey "^S" history-incremental-search-forward
+
+if [[ -f ~/.fzf.zsh ]]
+then
+    source ~/.fzf.sh
+else
+    bindkey "^R" history-incremental-search-backward
+    bindkey "^S" history-incremental-search-forward
+fi
 
 #Slow cd tab completion
 zstyle ':completion:*' accept-exact '*(N)'
