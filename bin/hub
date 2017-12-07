@@ -1,17 +1,20 @@
 #!/bin/bash
 function pull {
-    for i in `\ls` ; 
+    echo "hub -p(ull) will be deprecated in favor of repos"
+    for i in `\ls -d */` ;
     do 
-      cd ${i} ; 
-      echo ${i}; 
+      cd ${i}
+      git stash
       git checkout master;
       git pull;
-      cd - > /dev/null; 
+      git checkout -
+      git stash pop
+      cd - > /dev/null
     done
 }
 
 function branches {
-    for i in `ls` ; 
+    for i in `ls -d */` ;
     do 
       cd ${i} ; 
       branches=$(git branch | wc -l)
@@ -25,7 +28,7 @@ function branches {
 }
 
 function status {
-    for i in `ls`;
+    for i in `ls -d */`;
     do
         cd ${i}
         modified=$(git status -s | wc -l)
@@ -38,7 +41,21 @@ function status {
    done     
 }
 
-while getopts ":pbs" opt; 
+function list_stash {
+    for i in `ls -d */`;
+    do
+        cd ${i}
+        modified=$(git --no-pager stash list | wc -l)
+        if [ ${modified} -gt 0 ]
+        then
+            echo ${i}
+            git --no-pager stash list
+        fi
+        cd - > /dev/null;
+   done
+}
+
+while getopts ":pbsl" opt;
 do
     case ${opt} in
         p)
@@ -50,6 +67,9 @@ do
         s)
             status
         ;;    
+        l)
+            list_stash
+        ;;
         \?)
         echo "Invalid option"
         ;;
