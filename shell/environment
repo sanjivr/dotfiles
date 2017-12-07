@@ -29,7 +29,10 @@ then
 			export BASH_COMPLETION=/sw/etc/bash_completion
 		fi	
 	fi
-    if [ -d "/Library/Frameworks/Python.framework/Versions/2.7/bin" ]
+    if [ -d "/usr/local/opt/python/libexec/bin" ]
+    then
+        PATH="/usr/local/opt/python/libexec/bin:$PATH"
+    elif [ -d "/Library/Frameworks/Python.framework/Versions/2.7/bin" ]
     then    
         PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin/:$PATH"
     fi

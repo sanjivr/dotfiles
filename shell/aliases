@@ -47,6 +47,14 @@ svn2http() {
     echo ${httpurl}
 }
 
+if [[ $__custom_var_os == "Darwin" ]]
+then
+    $(which python2 2 > /dev/null)
+    if [[ $? -eq 0 ]]
+    then
+        alias python='python2'
+    fi
+fi
 if [[ $WORK"x" == "truex" ]]
 then
     alias logs='cd /home/y/logs/'
