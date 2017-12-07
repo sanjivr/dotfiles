@@ -36,6 +36,7 @@ then
     then    
         PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin/:$PATH"
     fi
+    export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
 elif [[ $__custom_var_os == "Linux" ]]
 then
 	# Add Android SDK Tools Path
