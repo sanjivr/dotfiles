@@ -64,3 +64,5 @@ colorscheme solarized
 "Fpr Solarized inside tmux
 set t_ut=
 
+"add fzf path to runtimepath
+set rtp+=/usr/local/opt/fzf
