@@ -110,3 +110,10 @@ PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%n%{$fg[cyan]%}@%{$fg_bold[green
 if (( $+commands[chef] )) ; then
     eval "$(chef shell-init zsh)"
 fi
+
+#dedupe history
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_save_no_dups
