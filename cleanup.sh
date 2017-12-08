@@ -9,6 +9,7 @@ rm -f ~/.zshenv
 rm -f ~/.zshrc
 
 rm -f ~/.screenrc
+rm -rf ~/.tmux
 rm -f ~/.tmux.conf
 
 rm -f ~/.subversion/config
@@ -28,6 +29,7 @@ rm -rf ~/bin
 
 # rm -rf ~/.ssh
 # rm -f ~/.ssh/config
+rm -f ~/.ssh/rc
 
 # Cleanup - No need for these scripts ever
 rm -f ~/.bash_aliases
