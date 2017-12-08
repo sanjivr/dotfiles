@@ -46,13 +46,14 @@ then
 	fi
 fi
 
-hostname| grep -q "yahoo.com"
-if [ $? -eq 0 ]
+if [[ -f ~/.${USER}-personal ]]
 then
+    export WORK=false
+else
 	export WORK=true
 fi
 
-if [[ $WORK"x" == "truex" ]]
+if [[ "$WORK" == "true" ]]
 then
 	export  FIGNORE=$FIGNORE:.svn
 

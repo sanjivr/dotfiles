@@ -55,7 +55,7 @@ then
         alias python='python2'
     fi
 fi
-if [[ $WORK"x" == "truex" ]]
+if [[ "$WORK" == "true" ]]
 then
     alias logs='cd /home/y/logs/'
     alias conf='cd /home/y/conf'
