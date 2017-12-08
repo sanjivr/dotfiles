@@ -57,11 +57,13 @@ then
 	export  FIGNORE=$FIGNORE:.svn
 
 	#YROOT Specific, 
-	if [ -n $YROOT_NAME ]
+	if [[ -n "$YROOT_NAME" ]]
 	then
-		if [ -n "$BASH_VERSION" ]; then
+		if [[ -n "$BASH_VERSION" ]]; then
 			export PS1="[\u@<\h:$YROOT_NAME>:\W]"
 		fi
+        echo "setting SSH_AUTH_SOCK"
+        export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 	fi
 	
 	#OS Specific
