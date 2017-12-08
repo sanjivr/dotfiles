@@ -1,6 +1,6 @@
 [user]
     name = Sanjiv Raj
-    #email = sanjivr@yahoo-inc.com
+    #email = sanjivr@oath.com
     email = sanjiv.raj@gmail.com
 [diff]
     tool = vimdiff
@@ -14,3 +14,7 @@
     smudge = git media smudge %f
 [core]
     excludesfile = ~sanjivr/.gitignore_global
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
