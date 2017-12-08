@@ -14,6 +14,8 @@ ln -sf `pwd`/shell/environment  ~/.zshenv
 ln -sf `pwd`/shell/zshrc        ~/.zshrc
 
 ln -sf `pwd`/screenrc           ~/.screenrc
+mkdir -p                        ~/.tmux
+ln -sf `pwd`/tmux_ssh.conf      ~/.tmux/tmux_ssh.conf
 cat tmux.conf   >               ~/.tmux.conf
 cat solarized/tmux/tmuxcolors-256.conf >> ~/.tmux.conf
 
