@@ -38,6 +38,7 @@ au FileType ruby setl sw=2 sts=2
 
 augroup filetypedetect 
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
+  au BufNewFile,BufRead *.yaml set ts=2
 augroup END
 
 "NERDTree
