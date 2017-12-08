@@ -54,6 +54,11 @@ then
     then
         alias python='python2'
     fi
+    $(which pip2 2 > /dev/null)
+    if [[ $? -eq 0 ]]
+    then
+        alias pip='pip2'
+    fi
 fi
 if [[ "$WORK" == "true" ]]
 then
