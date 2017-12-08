@@ -54,19 +54,7 @@ fi
 
 if [[ $WORK"x" == "truex" ]]
 then
-	#Oracle Stuff
-	export ORACLE_HOME=/home/y/libexec/oracle/
-	export TNS_ADMIN=/home/y/conf/oracle/
-	export NLS_LANG=.UTF8 
-
-	#SVN
-	if [ -x /usr/local/bin/yssh ]
-	then
-		export 	SVN_SSH=/usr/local/bin/yssh
-	fi	
-	export  SVNROOT=svn+ssh://svn.corp.yahoo.com/
 	export  FIGNORE=$FIGNORE:.svn
-
 
 	#YROOT Specific, 
 	if [ -n $YROOT_NAME ]
@@ -80,9 +68,6 @@ then
 	if [[ $__custom_var_os == "Linux" ]]
 	then
 		export JAVA_HOME=/home/y/
-	elif [[ $__custom_var_os == "FreeBSD" ]]
-	then
-		export JAVA_HOME=/home/y/libexec32/jdk1.5.0
 	fi
 else	
 	if [[ $__custom_var_os == "Linux" ]]
