@@ -44,6 +44,7 @@ then
     rm -rf ~/.ssh
     ln -sf ~/Dropbox/System/Unix/ssh/ ~/.ssh
 else    
+    ln -sf `pwd`/ssh/rc      ~/.ssh/rc
     echo "COPY SSH KEYS Manually"
 fi
 ln -sf ~/.ssh/authorized_keys   ~/.ssh/authorized_keys2
