@@ -80,7 +80,7 @@ source ~/.shell_startup/shell
 
 if [[ -f ~/.fzf.zsh ]]
 then
-    source ~/.fzf.sh
+    source ~/.fzf.zsh
 else
     bindkey "^R" history-incremental-search-backward
     bindkey "^S" history-incremental-search-forward
