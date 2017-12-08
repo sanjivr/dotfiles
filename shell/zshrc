@@ -46,10 +46,10 @@ CASE_SENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-#if [[ `uname` != 'Darwin' ]]
-#then
-#    plugins+=( ssh-agent)
-#fi
+if [[ "$WORK" == "false" ]]
+then
+    plugins+=( ssh-agent)
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,8 +93,11 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 compdef -d svn
 
-#zstyle :omz:plugins:ssh-agent agent-forwarding on
-#zstyle :omz:plugins:ssh-agent identities id_git_rsa id_github_rsa
+if [[ "$WORK" == "false" ]]
+then
+    #zstyle :omz:plugins:ssh-agent agent-forwarding on
+    zstyle :omz:plugins:ssh-agent identities id_github_rsa
+fi
 
 zstyle ':completion:*' users sanjivr y 
 setopt nocdablevars
