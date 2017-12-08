@@ -93,8 +93,11 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 compdef -d svn
 
-if [[ "$WORK" == "false" ]]
+
+if [[ -a ~/.ssh/ssh_auth_sock && "$WORK" == "true" ]]
 then
+    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+else
     #zstyle :omz:plugins:ssh-agent agent-forwarding on
     zstyle :omz:plugins:ssh-agent identities id_github_rsa
 fi
