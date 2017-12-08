@@ -42,11 +42,6 @@ then
     alias sqlplus='rlwrap sqlplus'
 fi
 
-svn2http() {
-    httpurl=$(svn info ${1} 2>/dev/null | grep ^URL | awk -F"URL:" '{print $2}' | sed 's/svn+ssh/http/' | sed 's/svn.corp.yahoo.com/svn.corp.yahoo.com\/view/')
-    echo ${httpurl}
-}
-
 if [[ $__custom_var_os == "Darwin" ]]
 then
     $(which python2 2 > /dev/null)
@@ -64,28 +59,11 @@ if [[ "$WORK" == "true" ]]
 then
     alias logs='cd /home/y/logs/'
     alias conf='cd /home/y/conf'
-    alias lib='cd /home/y/lib'
-    alias etc='cd /home/y/etc/'
-    alias htdocs='cd /home/y/share/htdocs'
-    alias pear='cd /home/y/share/pear/Yahoo'
+    alias blacklist="curl -q -s https://dhrainbow-config.zenfs.com/blacklist/hostlist.txt"
+    alias blacklog="curl -q -s https://dhrainbow-config.zenfs.com/blacklist/audit_blacklist.txt" 
 
     #Rainbow
-    alias sgrep='grep --exclude-dir=*svn*'
-    alias trunk='cd ~/svn/trunk'
-    #Jump to java src 
-    #find doesn't take cd as exec argument. Well, cd is a bash builtin and not a command per se
     alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
-    #Jump to java tests
     alias test='cd $(find . -name "*rainbow" -type d -path "*src*test*" | grep -v resource )'
-    #Jumpt to srctop of library
     alias upsrc="cd \$(pwd | awk -Fsrc '{print \$1}')"
-    alias blacklist="curl -q -s https://dhrainbow-config.zenfs.com/blacklist/hostlist.txt"
-
-    #svn
-    alias svndiff='svn diff --diff-cmd ~/bin/diffwrap.sh'
-    alias svnhttp='svn2http'
-
-    function svnlog() {
-        svn log $1 $2 | perl -l40pe 's/^-+/\n/'
-    }
 fi
