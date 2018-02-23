@@ -1,7 +1,7 @@
 [user]
     name = Sanjiv Raj
-    #email = sanjivr@oath.com
-    email = sanjiv.raj@gmail.com
+    email = sanjivr@oath.com
+    #email = sanjiv.raj@gmail.com
 [diff]
     tool = vimdiff
 [difftool]
