@@ -8,6 +8,7 @@
     prompt = false
 [alias]
     d = difftool
+    fixup = commit --fixup
 [filter "media"]
     required = true
     clean = git media clean %f
