@@ -69,5 +69,5 @@ set t_ut=
 set rtp+=/usr/local/opt/fzf
 
 "ctags
-set tags=/Users/sanjivr/git/.tags
+set tags=$HOME/git/.tags
 nnoremap <C-]> g<C-]>
