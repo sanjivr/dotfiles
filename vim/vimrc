@@ -67,3 +67,7 @@ set t_ut=
 
 "add fzf path to runtimepath
 set rtp+=/usr/local/opt/fzf
+
+"ctags
+set tags=/Users/sanjivr/git/.tags
+nnoremap <C-]> g<C-]>
