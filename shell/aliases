@@ -65,6 +65,6 @@ then
 
     #Rainbow
     alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
-    alias test='cd $(find . -name "*rainbow" -type d -path "*src*test*" | grep -v resource )'
+    alias src-test='cd $(find . -name "*rainbow" -type d -path "*src*test*" | grep -v resource )'
     alias upsrc="cd \$(pwd | awk -Fsrc '{print \$1}')"
 fi
