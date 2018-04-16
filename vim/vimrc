@@ -71,3 +71,5 @@ set rtp+=/usr/local/opt/fzf
 "ctags
 set tags=$HOME/git/.tags
 nnoremap <C-]> g<C-]>
+" :tselect /pattern
+" <C-T>
