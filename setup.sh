@@ -37,6 +37,8 @@ ln -sf `pwd`/curlrc             ~/.curlrc
 
 ln -sf `pwd`/bin                ~/
 
+ln -sf `pwd`/devops/docker      ~/.docker
+
 if [ -d ~/Dropbox/System/Unix/ssh ]
 then
     rm -rf ~/.ssh

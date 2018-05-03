@@ -30,6 +30,8 @@ rm -rf ~/bin
 # rm -rf ~/.ssh
 # rm -f ~/.ssh/config
 rm -f ~/.ssh/rc
+rm -rf ~/.gnupg
+rm -rf ~/.docker
 
 # Cleanup - No need for these scripts ever
 rm -f ~/.bash_aliases
