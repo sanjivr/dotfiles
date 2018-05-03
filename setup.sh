@@ -45,6 +45,11 @@ else
     ln -sf `pwd`/ssh/rc      ~/.ssh/rc
     echo "COPY SSH KEYS Manually"
 fi
+if [ -d ~/Dropbox/System/Unix/gnupg ]
+then
+    rm -rf ~/.gnupg
+    ln -sf ~/Dropbox/System/Unix/gnupg ~/.gnupg
+fi
 ln -sf ~/.ssh/authorized_keys   ~/.ssh/authorized_keys2
 
 echo "On a new host:"
