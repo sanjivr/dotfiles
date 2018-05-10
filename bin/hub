@@ -21,7 +21,7 @@ function branches {
       if [ ${branches} -gt 1 ] 
       then
         echo ${i}; 
-        git branch
+        git branch -v
       fi
       cd - > /dev/null; 
     done
