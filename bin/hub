@@ -1,4 +1,5 @@
 #!/bin/bash
+verbose=""
 function pull {
     echo "hub -p(ull) will be deprecated in favor of repos"
     for i in `\ls -d */` ;
@@ -21,7 +22,7 @@ function branches {
       if [ ${branches} -gt 1 ] 
       then
         echo ${i}; 
-        git branch -v
+        git branch ${verbose}
       fi
       cd - > /dev/null; 
     done
@@ -54,24 +55,29 @@ function list_stash {
         cd - > /dev/null;
    done
 }
-
-while getopts ":pbsl" opt;
+op=exit
+while getopts ":pbslv" opt;
 do
     case ${opt} in
+        v)
+            verbose=" -v"
+        ;;
         p)
-            pull
+            op=pull
         ;;
         b)
-            branches
+            op=branches
         ;;
         s)
-            status
+            op=status
         ;;    
         l)
-            list_stash
+            op=list_stash
         ;;
         \?)
-        echo "Invalid option"
+            echo "Invalid option"
+            op=exit
         ;;
     esac    
 done
+eval ${op}
