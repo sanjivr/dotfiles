@@ -1,5 +1,9 @@
 #!/bin/bash
 verbose=""
+function common {
+    comm -12 <(find $1 -maxdepth 1 | xargs basename | sort ) <(find $2 -maxdepth 1| xargs basename | sort)
+}
+
 function pull {
     echo "hub -p(ull) will be deprecated in favor of repos"
     for i in `\ls -d */` ;
@@ -56,14 +60,16 @@ function list_stash {
    done
 }
 op=exit
-while getopts ":pbslv" opt;
+while getopts ":bslvc" opt;
 do
     case ${opt} in
         v)
             verbose=" -v"
         ;;
-        p)
-            op=pull
+        c)
+            shift
+            op=common
+            params=$@
         ;;
         b)
             op=branches
@@ -80,4 +86,4 @@ do
         ;;
     esac    
 done
-eval ${op}
+eval ${op} ${params}
