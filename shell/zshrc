@@ -78,6 +78,10 @@ source $ZSH/oh-my-zsh.sh
 source ~/.shell_startup/aliases
 source ~/.shell_startup/shell
 
+if (( $+commands[jenv] )); then
+    eval "$(jenv init -)"
+fi
+
 if [[ -f ~/.fzf.zsh ]]
 then
     source ~/.fzf.zsh

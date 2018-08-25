@@ -22,7 +22,7 @@ __custom_var_os=`uname`
 #OS Specific
 if [[ $__custom_var_os == "Darwin" ]]
 then
-	export JAVA_HOME=/Library/Java/Home
+	PATH=$HOME/.jenv/bin:$PATH
 	if [ -n "$BASH_VERSION" ]; then
 		if [ -f /sw/etc/bash_completion ] 
 		then
