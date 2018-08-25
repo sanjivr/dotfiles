@@ -76,6 +76,8 @@ else
 	then
 		export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
 		export PATH=$PATH:~/scala/sbt/bin
+		export GOPATH=~/go
+		export PATH=$PATH:/usr/local/go/bin
 	fi	
 
 fi
