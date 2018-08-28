@@ -4,3 +4,5 @@ topaz
 zms-cli
 aws-sso
 devops/docker/config.json
+bin/fzf
+bin/rg
