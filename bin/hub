@@ -1,7 +1,18 @@
 #!/bin/bash
 verbose=""
+purge=false
 function common {
-    comm -12 <(find $1 -maxdepth 1 -exec basename {} \;| sort ) <(find $2 -maxdepth 1 -exec basename {} \; | sort)
+    repos=($(comm -12 <(find $1 -maxdepth 1 -not -path ".repos" -exec basename {} \;| grep -v .repos | sort) <(find $2 -maxdepth 1 -exec basename {} \; | grep -v ".repos"| sort) ))
+    for repo in "${repos[@]}"
+    do
+        if $purge
+        then
+            echo "Purging $1/repo"
+            rm -rf $1/$repo
+        else
+            echo "$repo"
+        fi
+        done
 }
 
 function pull {
@@ -60,16 +71,17 @@ function list_stash {
    done
 }
 op=exit
-while getopts ":bslvc" opt;
+while getopts ":bslvcp" opt;
 do
     case ${opt} in
         v)
             verbose=" -v"
         ;;
         c)
-            shift
             op=common
-            params=$@
+        ;;
+        p)
+            purge=true
         ;;
         b)
             op=branches
@@ -82,8 +94,10 @@ do
         ;;
         \?)
             echo "Invalid option"
-            op=exit
+            exit -1
         ;;
     esac    
 done
+shift $(($OPTIND -1))
+params=$@
 eval ${op} ${params}
