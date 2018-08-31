@@ -7,7 +7,7 @@ function common {
     do
         if $purge
         then
-            echo "Purging $1/repo"
+            echo "Purging $1/$repo"
             rm -rf $1/$repo
         else
             echo "$repo"
