@@ -32,6 +32,7 @@ alias myrepo='cd ~/git/sanjivr'
 alias tprepo='cd ~/git/tp'
 alias yrepo='cd ~/git/yahoo'
 alias tags='ctags --recurse -f ~/git/.tags ~/git/'
+alias gb='git --no-pager branch'
 
 if [ `which valgrind > /dev/null 2>&1` ]
 then

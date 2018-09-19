@@ -37,7 +37,7 @@ function branches {
       if [ ${branches} -gt 1 ] 
       then
         echo ${i}; 
-        git branch ${verbose}
+        git --no-pager branch ${verbose}
       fi
       cd - > /dev/null; 
     done
