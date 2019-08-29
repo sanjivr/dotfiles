@@ -116,8 +116,8 @@ setopt nocdablevars
 setopt interactivecomments
 unsetopt nomatch
 
-PROMPT='%{$fg_bold[red]%}➜ %{ $fg_bold[green]%}%n%{$fg[cyan]%}@%{$fg_bold[green]%}%m %{$fg_bold[red]%}<$YROOT_NAME> %{$fg_bold[green]%}%p %{$fg[cyan]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} %p
-➜%{$reset_color%}   '
+PROMPT='%{$fg_bold[red]%}➜%{ $fg_bold[green]%}%n%{$fg[cyan]%}@%{$fg_bold[green]%}%m %{$fg_bold[red]%}<$YROOT_NAME> %{$fg_bold[green]%}%p %{$fg[cyan]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} %p
+➜%{$reset_color%} '
 
 #chef environment
 if (( $+commands[chef] )) ; then
