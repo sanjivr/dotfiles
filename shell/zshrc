@@ -85,6 +85,9 @@ fi
 if [[ -f ~/.fzf.zsh ]]
 then
     source ~/.fzf.zsh
+elif [[ -f /usr/share/fzf/key-bindings.zsh ]]
+then
+    source /usr/share/fzf/key-bindings.zsh
 else
     bindkey "^R" history-incremental-search-backward
     bindkey "^S" history-incremental-search-forward
@@ -113,8 +116,8 @@ setopt nocdablevars
 setopt interactivecomments
 unsetopt nomatch
 
-PROMPT='%{$fg_bold[red]%}➜ %{$fg_bold[green]%}%n%{$fg[cyan]%}@%{$fg_bold[green]%}%m %{$fg_bold[red]%}<$YROOT_NAME> %{$fg_bold[green]%}%p %{$fg[cyan]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % 
-➜%{$reset_color%} '
+PROMPT='%{$fg_bold[red]%}➜ %{ $fg_bold[green]%}%n%{$fg[cyan]%}@%{$fg_bold[green]%}%m %{$fg_bold[red]%}<$YROOT_NAME> %{$fg_bold[green]%}%p %{$fg[cyan]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} %p
+➜%{$reset_color%}   '
 
 #chef environment
 if (( $+commands[chef] )) ; then
