@@ -61,8 +61,6 @@ if [[ "$WORK" == "true" ]]
 then
     alias logs='cd /home/y/logs/'
     alias conf='cd /home/y/conf'
-    alias blacklist="curl -q -s https://dhrainbow-config.zenfs.com/blacklist/hostlist.txt"
-    alias blacklog="curl -q -s https://dhrainbow-config.zenfs.com/blacklist/audit_blacklist.txt" 
 
     #Rainbow
     alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
