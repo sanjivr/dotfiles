@@ -1,7 +1,5 @@
 [user]
     name = Sanjiv Raj
-    email = sanjivr@oath.com
-    #email = sanjiv.raj@gmail.com
 [diff]
     tool = vimdiff
 [difftool]
@@ -19,3 +17,7 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[http "https://gopkg.in"]
+    followRedirects = true
+[include]
+    path=~/.gitconfig_extra
