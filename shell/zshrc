@@ -51,6 +51,15 @@ then
     plugins+=( ssh-agent)
 fi
 
+
+if [[ -a ~/.ssh/ssh_auth_sock && "$WORK" == "true" ]]
+then
+    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+else
+    #zstyle :omz:plugins:ssh-agent agent-forwarding on
+    zstyle :omz:plugins:ssh-agent identities id_github_rsa
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -99,15 +108,6 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
 compdef -d svn
-
-
-if [[ -a ~/.ssh/ssh_auth_sock && "$WORK" == "true" ]]
-then
-    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-else
-    #zstyle :omz:plugins:ssh-agent agent-forwarding on
-    zstyle :omz:plugins:ssh-agent identities id_github_rsa
-fi
 
 zstyle ':completion:*' users sanjivr y 
 setopt nocdablevars
