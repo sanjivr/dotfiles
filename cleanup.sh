@@ -8,11 +8,9 @@ rm -f ~/.oh-my-zsh
 rm -f ~/.zshenv
 rm -f ~/.zshrc
 
-rm -f ~/.screenrc
 rm -rf ~/.tmux
 rm -f ~/.tmux.conf
 
-rm -f ~/.subversion/config
 rm -f ~/.gitconfig
 rm -f ~/.gitignore_global
 

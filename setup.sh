@@ -13,12 +13,9 @@ ln -sf `pwd`/oh-my-zsh          ~/.oh-my-zsh
 ln -sf `pwd`/shell/environment  ~/.zshenv
 ln -sf `pwd`/shell/zshrc        ~/.zshrc
 
-ln -sf `pwd`/screenrc           ~/.screenrc
 ln -sf `pwd`/tmux               ~/.tmux
 ln -sf ~/.tmux/tmux.conf        ~/.tmux.conf
 
-mkdir -p                        ~/.subversion/
-ln -sf `pwd`/subversion.conf    ~/.subversion/config
 ln -sf `pwd`/gitconfig          ~/.gitconfig
 ln -sf `pwd`/gitignore_global   ~/.gitignore_global
 
