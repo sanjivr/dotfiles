@@ -35,7 +35,11 @@ ln -sf ~/.vim/vimrc             ~/.vimrc
 
 ln -sf `pwd`/curlrc             ~/.curlrc
 
-ln -sf `pwd`/bin                ~/
+mkdir -p ~/bin
+for i in `ls bin`;
+do
+    ln -sf `pwd`/bin/$i ~/bin/
+done
 
 ln -sf `pwd`/devops/docker      ~/.docker
 

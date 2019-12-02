@@ -25,7 +25,10 @@ rm -f ~/.vim
 
 rm -f ~/.curlrc
 
-rm -rf ~/bin
+for i in `ls bin`;
+do
+    rm ~/bin/$i
+done
 
 # rm -rf ~/.ssh
 # rm -f ~/.ssh/config
