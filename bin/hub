@@ -37,7 +37,7 @@ function branches {
       if [ ${branches} -gt 1 ] 
       then
         echo ${i}; 
-        git --no-pager branch ${verbose}
+        git --no-pager branch ${verbose} ${remote}
       fi
       cd - > /dev/null; 
     done
@@ -80,7 +80,7 @@ function list_stash {
    done
 }
 op=exit
-while getopts ":bslvcpx" opt;
+while getopts ":brslvcpx" opt;
 do
     case ${opt} in
         v)
@@ -91,6 +91,9 @@ do
         ;;
         p)
             purge=true
+        ;;
+        r)
+            remote=" -r"
         ;;
         b)
             op=branches
