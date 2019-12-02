@@ -74,9 +74,10 @@ else
 	if [[ $__custom_var_os == "Linux" ]]
 	then
 		export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
-		export PATH=$PATH:~/scala/sbt/bin
 		export GOPATH=~/go
-		export PATH=$PATH:/usr/local/go/bin
+		PATH=$PATH:$HOME/scala/sbt/bin
+		PATH=$PATH:/usr/local/go/bin
+		PATH=$PATH:$HOME/.cargo/bin
 	fi	
 fi
 export PATH
