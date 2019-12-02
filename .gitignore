@@ -4,5 +4,6 @@ topaz
 zms-cli
 aws-sso
 devops/docker/config.json
+devops/docker/.buildNodeID
 bin/fzf
 bin/rg
