@@ -5,7 +5,6 @@ then
 	PATH=/sbin:$PATH
 fi
 PATH=$HOME/bin:$PATH
-export SVN_EDITOR=vi
 
 #Global, but shell specific
 if [ -n "$BASH_VERSION" ]; then
@@ -79,6 +78,5 @@ else
 		export GOPATH=~/go
 		export PATH=$PATH:/usr/local/go/bin
 	fi	
-
 fi
 export PATH
