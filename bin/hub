@@ -33,11 +33,11 @@ function branches {
     for i in `ls -d */` ;
     do 
       cd ${i} ; 
-      branches=$(git branch | wc -l)
+      branches=$(git branch ${remote} | wc -l)
       if [ ${branches} -gt 1 ] 
       then
         echo ${i}; 
-        git --no-pager branch ${verbose} ${remote}
+        git --no-pager branch ${verbose} ${remote} | grep -v "origin/master" | grep -v "origin/HEAD"
       fi
       cd - > /dev/null; 
     done
