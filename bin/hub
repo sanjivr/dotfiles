@@ -18,7 +18,7 @@ function common {
 function pull {
     echo "hub -p(ull) will be deprecated in favor of repos"
     for i in `\ls -d */` ;
-    do 
+    do
       cd ${i}
       git stash
       git checkout master;
@@ -29,17 +29,36 @@ function pull {
     done
 }
 
+function _remote_branches {
+    # ideally use git for-each-ref
+    branches=( $(git --no-pager branch ${verbose} $remote) )
+    # if remote-tracking branches are not updated use git ls-remotes --heads
+    for branch in "${branches[@]}"
+    do
+        [[ $branch =~ "origin/HEAD" ]] && continue
+        [[ $branch =~ "origin/master" ]] && continue
+        [[ $branch =~ "->" ]] && continue
+        echo -e "\t ${branch}"
+    done
+}
+
 function branches {
     for i in `ls -d */` ;
-    do 
-      cd ${i} ; 
-      branches=$(git branch ${remote} | wc -l)
-      if [ ${branches} -gt 1 ] 
+    do
+      cd ${i} ;
+      if [ -z ${remote} ]
       then
-        echo ${i}; 
-        git --no-pager branch ${verbose} ${remote} | grep -v "origin/master" | grep -v "origin/HEAD"
+          branches=$(git branch ${remote} | wc -l)
+          if [ ${branches} -gt 1 ]
+          then
+            echo ${i};
+            git --no-pager branch ${verbose}
+          fi
+      else
+          echo ${i};
+          _remote_branches
       fi
-      cd - > /dev/null; 
+      cd - > /dev/null;
     done
 }
 
@@ -54,7 +73,7 @@ function status {
             git status -s
         fi
         cd - > /dev/null;
-   done     
+   done
 }
 
 function prune {
@@ -100,7 +119,7 @@ do
         ;;
         s)
             op=status
-        ;;    
+        ;;
         l)
             op=list_stash
         ;;
@@ -111,7 +130,7 @@ do
             echo "Invalid option"
             exit -1
         ;;
-    esac    
+    esac
 done
 shift $(($OPTIND -1))
 params=$@
