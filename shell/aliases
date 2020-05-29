@@ -28,6 +28,7 @@ alias grep='grep $LSCOLOROPT'
 alias egrep='egrep $LSCOLOROPT'
 alias fgrep='fgrep $LSCOLOROPT'
 alias repo='cd ~/git/dhrainbow'
+alias mygit='cd ~/github/sanjivr'
 alias myrepo='cd ~/git/sanjivr'
 alias tprepo='cd ~/git/tp'
 alias yrepo='cd ~/git/yahoo'
@@ -44,24 +45,8 @@ then
     alias sqlplus='rlwrap sqlplus'
 fi
 
-if [[ $__custom_var_os == "Darwin" ]]
-then
-    $(which python2 2 > /dev/null)
-    if [[ $? -eq 0 ]]
-    then
-        :
-    fi
-    $(which pip2 2 > /dev/null)
-    if [[ $? -eq 0 ]]
-    then
-        :
-    fi
-fi
 if [[ "$WORK" == "true" ]]
 then
-    alias logs='cd /home/y/logs/'
-    alias conf='cd /home/y/conf'
-
     #Rainbow
     alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
     alias src-test='cd $(find . -name "*rainbow" -type d -path "*src*test*" | grep -v resource )'
