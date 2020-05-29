@@ -55,5 +55,9 @@ then
 fi
 ln -sf ~/.ssh/authorized_keys   ~/.ssh/authorized_keys2
 
+mkdir -p ~/.gnupg
+ln -sf `pwd`/gnupg/gpg.conf ~/.gnupg/
+ln -sf `pwd`/gnupg/gpg-agent.conf ~/.gnupg/
+
 echo "On a new host:"
 echo "> Change shell to zsh via either chsh or /etc/passwd"

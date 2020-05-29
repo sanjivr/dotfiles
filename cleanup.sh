@@ -39,4 +39,6 @@ rm -f ~/.bash_aliases
 rm -f ~/.bash_profile
 rm -f ~/.bash_login
 
+rm -f ~/.gnupg/gpg.conf
+rm -f ~/.gnupg/gpg-agent.conf
 
