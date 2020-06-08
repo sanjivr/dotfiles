@@ -11,6 +11,8 @@ set hlsearch
 set ignorecase
 set nocompatible
 
+set modelines=1 " Not a good idea; see CVE-2007-2438
+
 set bs=indent,eol,start
 set tabstop=4
 set shiftwidth=4
@@ -20,8 +22,8 @@ set textwidth=120
 set formatoptions+=t
 "set colorcolumn=120
 "Highlight any lines longer than 120 chars
-:2mat ErrorMsg '\%121v.'
-:au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
+":2mat ErrorMsg '\%121v.'
+":au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
 
 filetype indent plugin on
 set autoindent
