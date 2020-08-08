@@ -45,15 +45,14 @@ augroup END
 
 "NERDTree
 "Open NERDTree on start
-"autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree
 "Focus on file when opened with NERDTree
-autocmd VimEnter * wincmd p
-"Open NERDTree on start even with no input files
+autocmd VimEnter * wincmd w
+"Open NERDTree && FZF on start even with no input files
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"Close vim if only NERDTree window is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute "FZF!"| execute "filetype detect" | NERDTree | wincmd w | endif
+"Close vim if only the NERDTree window is open
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "Airline
 let g:airline_theme='dark'
