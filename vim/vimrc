@@ -50,7 +50,7 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd w
 "Open NERDTree && FZF on start even with no input files
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | execute "FZF!"| execute "filetype detect" | NERDTree | wincmd w | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | if exists(":FZF") | execute "FZF!"| execute "filetype detect" | endif | NERDTree | wincmd w | endif
 "Close vim if only the NERDTree window is open
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
