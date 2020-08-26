@@ -1,3 +1,4 @@
+os=$(uname | tr '[:upper:]' '[:lower:]')
 git submodule update --init
 mkdir -p                        ~/.shell_startup
 ln -sf `pwd`/shell/aliases      ~/.shell_startup/aliases
@@ -57,7 +58,7 @@ ln -sf ~/.ssh/authorized_keys   ~/.ssh/authorized_keys2
 
 mkdir -p ~/.gnupg
 ln -sf `pwd`/gnupg/gpg.conf ~/.gnupg/
-ln -sf `pwd`/gnupg/gpg-agent.conf ~/.gnupg/
+ln -sf `pwd`/gnupg/gpg-agent-${os}.conf ~/.gnupg/gpg-agent.conf
 
 echo "On a new host:"
 echo "> Change shell to zsh via either chsh or /etc/passwd"
