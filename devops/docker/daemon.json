@@ -1,6 +1,8 @@
 {
-  "storage-driver" : "overlay2",
-  "debug" : true,
-  "experimental" : true
+  "storage-driver": "overlay2",
+  "debug": true,
+  "experimental": true,
+  "features": {
+    "buildkit": true
+  }
 }
-
