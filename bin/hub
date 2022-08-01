@@ -37,6 +37,7 @@ function _remote_branches {
     do
         [[ $branch =~ "origin/HEAD" ]] && continue
         [[ $branch =~ "origin/master" ]] && continue
+        [[ $branch =~ "origin/main" ]] && continue
         [[ $branch =~ "->" ]] && continue
         echo -e "\t ${branch}"
     done
