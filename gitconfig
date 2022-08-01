@@ -21,6 +21,8 @@
     followRedirects = true
 [includeIf "gitdir:~/git/"]
     path=~/gitconfig.local
+[includeIf "gitdir:~/go/"]
+    path=~/gitconfig.local
 [includeIf "gitdir:~/github/"]
     path=~/gitconfig.public
 [pull]
