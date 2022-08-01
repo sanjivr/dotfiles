@@ -3,7 +3,6 @@ vim/.netrwhist
 topaz
 zms-cli
 aws-sso
-devops/docker/config.json
-devops/docker/.buildNodeID
+devops/docker/*
 bin/fzf
 bin/rg
