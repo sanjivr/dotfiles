@@ -27,3 +27,5 @@
     path=~/gitconfig.public
 [pull]
 	ff = only
+[fetch]
+	prune = true
