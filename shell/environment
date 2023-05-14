@@ -65,6 +65,8 @@ then
         export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 	fi
 	
+	[ -f ~/.ylum/config ] && source ~/.ylum/config
+
 	#OS Specific
 	if [[ $__custom_var_os == "Linux" ]]
 	then
