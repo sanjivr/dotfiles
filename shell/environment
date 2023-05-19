@@ -66,6 +66,9 @@ then
 	fi
 	
 	[ -f ~/.ylum/config ] && source ~/.ylum/config
+	export LPASS_AGENT_TIMEOUT=2592000
+	export CHEF_SSH_YINIT_COMMAND=jyinit
+
 
 	#OS Specific
 	if [[ $__custom_var_os == "Linux" ]]
