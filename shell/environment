@@ -54,17 +54,6 @@ fi
 
 if [[ "$WORK" == "true" ]]
 then
-	export  FIGNORE=$FIGNORE:.svn
-
-	#YROOT Specific, 
-	if [[ -n "$YROOT_NAME" ]]
-	then
-		if [[ -n "$BASH_VERSION" ]]; then
-			export PS1="[\u@<\h:$YROOT_NAME>:\W]"
-		fi
-        export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-	fi
-	
 	[ -f ~/.ylum/config ] && source ~/.ylum/config
 	export LPASS_AGENT_TIMEOUT=2592000
 	export CHEF_SSH_YINIT_COMMAND=jyinit
