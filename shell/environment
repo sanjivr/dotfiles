@@ -28,13 +28,6 @@ then
 			export BASH_COMPLETION=/sw/etc/bash_completion
 		fi	
 	fi
-elif [[ $__custom_var_os == "Linux" ]]
-then
-	# Add Android SDK Tools Path
-	if [ -d "$HOME/Android/android-sdk/android-sdk-linux/platform-tools" ] 
-	then
-		PATH="$HOME/Android/android-sdk/android-sdk-linux/platform-tools:$PATH"
-	fi
 fi
 
 if [[ -f ~/.${USER}-personal ]]
