@@ -28,7 +28,6 @@ then
 			export BASH_COMPLETION=/sw/etc/bash_completion
 		fi	
 	fi
-    export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
 elif [[ $__custom_var_os == "Linux" ]]
 then
 	# Add Android SDK Tools Path
@@ -50,6 +49,7 @@ then
 	[ -f ~/.ylum/config ] && source ~/.ylum/config
 	export LPASS_AGENT_TIMEOUT=2592000
 	export CHEF_SSH_YINIT_COMMAND=jyinit
+	export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
 else	
 	if [[ $__custom_var_os == "Linux" ]]
 	then
