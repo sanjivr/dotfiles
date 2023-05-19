@@ -1,3 +1,7 @@
+# vim: set filetype=sshconfig:
+
+AddKeysToAgent yes
+
 Protocol 2,1 
 
 Host *
