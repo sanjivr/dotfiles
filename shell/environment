@@ -68,19 +68,10 @@ then
 	[ -f ~/.ylum/config ] && source ~/.ylum/config
 	export LPASS_AGENT_TIMEOUT=2592000
 	export CHEF_SSH_YINIT_COMMAND=jyinit
-
-
-	#OS Specific
-	if [[ $__custom_var_os == "Linux" ]]
-	then
-		export JAVA_HOME=/home/y/
-	fi
 else	
 	if [[ $__custom_var_os == "Linux" ]]
 	then
-		export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
 		export GOPATH=~/go
-		PATH=$PATH:$HOME/scala/sbt/bin
 		PATH=$PATH:$HOME/.cargo/bin
 	fi	
 fi
