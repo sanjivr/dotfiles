@@ -12,6 +12,10 @@ if [ -n "$BASH_VERSION" ]; then
 	export HISTSIZE=1000000
 	export HISTCONTROL=ignoredups:ignorespace
 	export PS1="[\u@<\h>:\W]"
+	if [ -f /sw/etc/bash_completion ]
+	then
+		export BASH_COMPLETION=/sw/etc/bash_completion
+	fi
 fi
 
 # Custom Section based on work, os
@@ -22,12 +26,6 @@ __custom_var_os=`uname`
 if [[ $__custom_var_os == "Darwin" ]]
 then
 	PATH=$HOME/.jenv/bin:$PATH
-	if [ -n "$BASH_VERSION" ]; then
-		if [ -f /sw/etc/bash_completion ] 
-		then
-			export BASH_COMPLETION=/sw/etc/bash_completion
-		fi	
-	fi
 fi
 
 if [[ -f ~/.${USER}-personal ]]
