@@ -52,5 +52,9 @@ if [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]
 then
    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+if [[ -f ~/git/.kdnc.token ]]
+then
+    export KDNC_GITHUB_API_TOKEN=$(cat ~/git/.kdnc.token)
+fi
 PATH=$PATH:/usr/local/go/bin
 export PATH
