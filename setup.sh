@@ -62,6 +62,8 @@ ln -sf `pwd`/gnupg/gpg-agent-${os}.conf ~/.gnupg/gpg-agent.conf
 
 mkdir -p ~/.config/i3
 ln -sf `pwd`/i3/config ~/.config/i3/
+mkdir -p ~/.config/i3status
+ln -sf `pwd`/i3/config.status ~/.config/i3status/config
 
 echo "On a new host:"
 echo "> Change shell to zsh via either chsh or /etc/passwd"

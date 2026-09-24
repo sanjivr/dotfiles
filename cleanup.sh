@@ -43,4 +43,5 @@ rm -f ~/.gnupg/gpg.conf
 rm -f ~/.gnupg/gpg-agent.conf
 
 rm -f ~/.config/i3/config
+rm -f ~/.config/i3status/config
 
