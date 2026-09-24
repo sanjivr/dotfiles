@@ -24,8 +24,6 @@
     path=~/gitconfig.local
 [includeIf "gitdir:~/go/"]
     path=~/gitconfig.local
-[includeIf "gitdir:~/github/"]
-    path=~/gitconfig.public
 [pull]
 	ff = only
 [fetch]

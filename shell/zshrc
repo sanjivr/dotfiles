@@ -103,7 +103,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 compdef -d svn
 
-zstyle ':completion:*' users sanjivr y 
+zstyle ':completion:*' users sanjiv
 setopt nocdablevars
 
 #bash style comments for the command line
@@ -131,6 +131,6 @@ setopt hist_save_no_dups
 #zprof
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/sanjivr/cloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sanjivr/cloud/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/cloud/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/cloud/google-cloud-sdk/path.zsh.inc'; fi
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/sanjivr/cloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sanjivr/cloud/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/cloud/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/cloud/google-cloud-sdk/completion.zsh.inc'; fi

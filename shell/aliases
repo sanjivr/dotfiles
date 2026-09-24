@@ -27,11 +27,7 @@ alias la='ls -ltra  $LSCOLOROPT'
 alias grep='grep $LSCOLOROPT'
 alias egrep='egrep $LSCOLOROPT'
 alias fgrep='fgrep $LSCOLOROPT'
-alias repo='cd ~/git/dhrainbow'
-alias mygit='cd ~/github/sanjivr'
-alias myrepo='cd ~/git/sanjivr'
-alias tprepo='cd ~/git/tp'
-alias yrepo='cd ~/git/yahoo'
+alias mygit='cd ~/git/sanjivr'
 alias tags='ctags --recurse -f ~/git/.tags ~/git/'
 alias gb='git --no-pager branch'
 
@@ -43,14 +39,6 @@ fi
 if [ `which rlwrap > /dev/null 2>&1` ]
 then
     alias sqlplus='rlwrap sqlplus'
-fi
-
-if [[ "$WORK" == "true" ]]
-then
-    #Rainbow
-    alias src='cd $(find . -name "*rainbow" -type d -path "*src*main*" )'
-    alias src-test='cd $(find . -name "*rainbow" -type d -path "*src*test*" | grep -v resource )'
-    alias upsrc="cd \$(pwd | awk -Fsrc '{print \$1}')"
 fi
 
 if [ `which kubectl > /dev/null 2>&1` ]
