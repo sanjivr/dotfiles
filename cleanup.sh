@@ -42,3 +42,5 @@ rm -f ~/.bash_login
 rm -f ~/.gnupg/gpg.conf
 rm -f ~/.gnupg/gpg-agent.conf
 
+rm -f ~/.config/i3/config
+

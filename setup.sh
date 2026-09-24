@@ -60,5 +60,8 @@ mkdir -p ~/.gnupg
 ln -sf `pwd`/gnupg/gpg.conf ~/.gnupg/
 ln -sf `pwd`/gnupg/gpg-agent-${os}.conf ~/.gnupg/gpg-agent.conf
 
+mkdir -p ~/.config/i3
+ln -sf `pwd`/i3/config ~/.config/i3/
+
 echo "On a new host:"
 echo "> Change shell to zsh via either chsh or /etc/passwd"
