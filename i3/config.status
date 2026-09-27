@@ -14,15 +14,16 @@ general {
         interval = 5
 }
 
-order += "wireless _first_"
-order += "ipv6"
-order += "ethernet _first_"
 order += "battery all"
+order += "tztime local"
+order += "wireless _first_"
 order += "cpu_temperature 0"
 order += "load"
+order += "ipv6"
+order += "ethernet _first_"
+order += "volume master"
 # order += "disk /"
 # order += "memory"
-order += "tztime local"
 
 
 wireless _first_ {
@@ -40,7 +41,7 @@ ethernet _first_ {
 
 battery all {
         format = "%status %percentage %remaining"
-        low_threshold = 20
+        low_threshold = 35
         threshold_type = percentage
 }
 
@@ -65,4 +66,12 @@ memory {
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S %Z"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
