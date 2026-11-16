@@ -60,8 +60,8 @@ mkdir -p ~/.gnupg
 ln -sf `pwd`/gnupg/gpg.conf ~/.gnupg/
 ln -sf `pwd`/gnupg/gpg-agent-${os}.conf ~/.gnupg/gpg-agent.conf
 
-mkdir -p ~/.config/i3
-ln -sf `pwd`/i3/config ~/.config/i3/
+mkdir -p ~/.config/sway
+ln -sf `pwd`/sway/config ~/.config/sway/
 mkdir -p ~/.config/i3status
 ln -sf `pwd`/i3/config.status ~/.config/i3status/config
 
