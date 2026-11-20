@@ -33,13 +33,11 @@ set ff=unix
 "source ~/cscope_maps.vim
 "highlight Normal ctermfg=darkgrey  ctermbg=black
 
-source ~/.vim/dhexception.vim
 source ~/.vim/python.vim
 
 au FileType ruby setl sw=2 sts=2
 
 augroup filetypedetect 
-  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig 
   au BufNewFile,BufRead *.yaml set ts=2
 augroup END
 
@@ -53,6 +51,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | if exists(":FZF") | execute "FZF!"| execute "filetype detect" | endif | NERDTree | wincmd w | endif
 "Close vim if only the NERDTree window is open
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree")  && b:NERDTree.isTabTree()) | q | endif
 
 "Airline
 let g:airline_theme='dark'
