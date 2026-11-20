@@ -44,4 +44,5 @@ rm -f ~/.gnupg/gpg-agent.conf
 
 rm -f ~/.config/sway/config
 rm -f ~/.config/i3status/config
+rm -f ~/.config/terminal-colors.d
 

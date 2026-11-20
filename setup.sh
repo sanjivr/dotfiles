@@ -65,5 +65,7 @@ ln -sf `pwd`/sway/config ~/.config/sway/
 mkdir -p ~/.config/i3status
 ln -sf `pwd`/i3/config.status ~/.config/i3status/config
 
+ln -sf `pwd`/terminal-colors.d ~/.config/
+
 echo "On a new host:"
 echo "> Change shell to zsh via either chsh or /etc/passwd"
